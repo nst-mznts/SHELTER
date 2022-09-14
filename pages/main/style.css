@@ -550,3 +550,71 @@ footer {
     padding-left: 40px;
     padding-right: 40px;
 }
+.footer-puppy {
+    position: absolute;
+    display: block;
+    max-width: 300px;
+    margin-top: 40px;
+    margin-right: 0;
+    margin-left: 900px;
+}
+.footer-contacts {
+    position: absolute;
+    display: flex;
+    width: 740px;
+    height: 234px;
+    margin-left: 0;
+    margin-top: 56px;
+    margin-right: 500px;
+    margin-bottom: 60px;
+}
+.contacts-list {
+ 
+    width: 278px;
+    height: 234px;
+    left: 0px;
+    top: 16px;
+    margin: 0;
+}
+.locations-list {
+
+    width: 302px;
+    height: 234px;
+    left: 438px;
+    top: 16px;
+    margin: 0;
+}
+.list__item {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 40px;
+    
+}
+.item-title {
+    width: 280px;
+    height: 90px;
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.item-link {
+    text-align: right;
+    height: 23px;
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    margin-left: 20px;
+    margin-top: 0;
+}

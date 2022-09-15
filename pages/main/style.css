@@ -13,17 +13,17 @@ body {
 
 .content-header {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin: 0 auto;
     max-width: 1280px;
-    height: 120px;
+    height: 130px;
     background-image: url(../../assets/images/start-screen-gradient-background.png);
 }
 
 .navigation {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 1200px;
     height: 60px;
     margin-top: 60px;
@@ -84,6 +84,7 @@ a.active {
     line-height: 110%;
     align-items: center;
     letter-spacing: 0.06em;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 

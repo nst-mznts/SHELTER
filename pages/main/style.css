@@ -1,128 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
 a {
     text-decoration: none;
-    }
+}
 
 body {
-    background-color: black;
-
+    background-color: #CDCDCD;
 }
 
 .content-header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 60px;
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 120px;
+    background-image: url(../../assets/images/start-screen-gradient-background.png);
+}
+
+.navigation {
+    position: absolute;
+    width: 1200px;
+    height: 60px;
+    margin-top: 60px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 60px;
-    max-width: 1280px;
 }
+
 .content-header__list {
+    display: flex;
+    align-items: flex-end;
     list-style: none;
     padding-left: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    width: 443px;
-    height: 27px;
-    left: 757px;
-    top: 16px;
+    max-width: 443px;
+    margin-left: 757px;
 }
+
 .content-header__item {
     margin-left: 35px;
 }
+
 .content-header__item:first-child {
     margin-left: 0;
 }
+
 .content-header__link {
-    color: #CDCDCD;
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
+    color: #CDCDCD;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 160%;
 }
-.content-header__logo {
-    line-height: 10px;
-    padding: 0;
+
+.content-header__link:hover {
+    color: #FAFAFA;
 }
+
+a.active {
+    color: #FAFAFA;
+    border-bottom: 3px solid #F1CDB3;
+}
+
+.content-header__logo {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    padding: 0;
+    margin-right: 573px;
+}
+
 .logo_title {
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
+    font-size: 30px;
     color: #F1CDB3;
-    font-size: 32px;
-    line-height: 10px;
+    line-height: 110%;
     align-items: center;
     letter-spacing: 0.06em;
+    margin-bottom: 10px;
 }
+
 .logo_subtitle {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #FFFFFF;
     font-size: 13px;
+    line-height: 15px;
     letter-spacing: 0.1em;
+    text-align: center;
 }
+
 .content-main__top {
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 1280px;
-    height: 728px;
-    line-height: 42px;
     position: relative;
-}
-.content-main__top, header {
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 788px;
     background-image: url(../../assets/images/start-screen-gradient-background.png);
 }
 
+.top {
+    position: absolute;
+    width: 1200px;
+    height: 728px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 60px;
+}
+
 .content-main-screen {
-    padding-top: 163px;
-    padding-bottom: 243px;
+    position: absolute;
+    width: 470px;
+    height: 332px;
+    margin-left: 0;
+    top: 163px;
 }
 
 .content-main__title {
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 44px;
+    font-size: 42px;
     line-height: 130%;
     color: #FFFFFF;
-    max-width: 310px;
-    height: 114px;
-}
-.content-main__subtitle {
-    font-family: Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-    color: #CDCDCD;
-    max-width: 460px;
-    height: 72px;
+    max-width: 332px;
     margin-bottom: 42px;
 }
+
+.content-main__subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #CDCDCD;
+    max-width: 470px;
+    margin-bottom: 42px;
+}
+
 .content-main__button {
     display: block;
     background: #F1CDB3;
-    text-decoration: none;
     border-radius: 100px;
     max-width: 207px;
     height: 52px;
 }
+
 .content-main__button:hover {
     background: #FDDCC4;
-    border-radius: 100px;
-  }
+}
+
 .content-main__button-label {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    text-align: center;
     color: #292929;
     font-size: 17px;
     font-weight: 400;
-    font-family: Georgia, serif;
-    font-style: normal;
-    text-align: center;
     width: 117px;
     height: 22px;
     padding: 15px 45px;
@@ -131,97 +172,94 @@ body {
 
 .start-screen-puppy {
     position: absolute;
-    width: 698px;
+    display: block;
+    max-width: 698px;
     height: 728px;
-    right: 0;
-    left: calc(50% - 698px/2 + 251px);
-    top: 0;
+    margin-right: 0;
+    margin-left: calc(50% - 698px/2 + 251px);
+    margin-top: 0;
 }
-.content-header__link:hover {
-    color: #FAFAFA;
-  }
-a.active {
-    color: #FAFAFA;
-    border-bottom: 3px solid #F1CDB3;
-}
+
 .content-main__about {
     position: relative;
     background-color: #FFFFFF;
     max-width: 1280px;
     height: 588px;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin: 0 auto;
 }
 
 .content-about {
-    position: relative;
-    width: 1200px;
+    position: absolute;
+    max-width: 1200px;
     height: 408px;
     padding-left: 40px;
-    padding-top: 80px;
     padding-right: 40px;
-    padding-bottom: 100px;
+    margin-top: 80px;
+    margin-bottom: 100px;
 }
+
 .about-pets__img {
     position: absolute;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    width: 300px;
+    max-width: 300px;
     height: 408px;
-    padding-top: 0;
-    padding-right: 725px;
-    padding-bottom: 0;
-    padding-left: 175px;
+    margin-right: 725px;
+    margin-left: 175px;
 }
-.content-about__text{
-    position: absolute;
-    width: 430px;
+
+.content-about__text {
+    width: 440px;
     height: 380px;
-    padding-top: 14px;
-    padding-right: 175px;
-    padding-bottom: 14px;
-    padding-left: 595px;
+    margin-top: 14px;
+    margin-right: 175px;
+    margin-bottom: 14px;
+    margin-left: 595px;
 }
+
 .about-text__tittle {
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
-    align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
     width: 370px;
     margin-top: 0;
     margin-bottom: 25px;
 }
+
 .about-text__subtittle {
-    width: 430px;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
     color: #4C4C4C;
+    width: 440px;
     margin-top: 0;
     margin-bottom: 25px;
 }
+
 .content-main__our-friends {
     position: relative;
     background-color: #F6F6F6;
     max-width: 1280px;
     height: 877px;
+    margin: 0 auto;
+}
+
+.our-friends {
+    position: absolute;
+    width: 1200px;
+    height: 697px;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 80px;
 }
+
 .our-friends__tittle {
     position: absolute;
-    width: 400px;
-    margin-top: 80px;
-    margin-left: 440px;
-    margin-right: 440px;
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -229,16 +267,22 @@ a.active {
     text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 60px;
 }
+
 .slider-container {
     position: absolute;
-    width: 1200px;
+    max-width: 1200px;
     height: 435px;
-    margin: 230px 40px 212px 40px;
+    margin-top: 150px;
+    margin-bottom: 112px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .slider {
     width: 990px;
     height: 435px;
@@ -246,6 +290,7 @@ a.active {
     padding-right: 105px;
     overflow: hidden;
 }
+
 .slider-line {
     height: 435px;
     width: 990px;
@@ -255,6 +300,7 @@ a.active {
     left: 0;
     transition: all ease 1s;
 }
+
 .slider-line-img {
     height: 270px;
     max-width: 270px;
@@ -270,6 +316,7 @@ a.active {
     border-radius: 9px;
     margin-right: 90px;
 }
+
 .slider__button {
     display: block;   
     text-decoration: none;
@@ -278,29 +325,31 @@ a.active {
     border: 2px solid #F1CDB3;
     border-radius: 100px;
 }
+
+.slider-line__item:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
 .slider__button:hover {
     background: #FDDCC4;
     border: none;
-  }
+}
+
 .slider__button-label {
-    width: 98px;
-    height: 22px;
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     text-align: center;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
     margin: 15px 45px;
 }
+
 .slider-pet-name {
-    width: 74px;
-    height: 23px;
-    left: 98px;
-    top: 300px;
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -310,6 +359,7 @@ a.active {
     color: #545454;
     margin: 30px 0;
 }
+
 .slider-prev {
     border: 2px solid #F1CDB3;
     border-radius: 100px;
@@ -323,60 +373,60 @@ a.active {
     width: 52px;
     height: 52px;
 }
+
 .slider-next:hover {
     background: #FDDCC4;
     border: none;
 }
+
 .slider-prev:hover {
     background: #FDDCC4;
     border: none;
 }
+
 .our-friends__button {
+    display: block;
+    position: absolute;
     width: 261px;
     height: 52px;
-    margin-left: 510px;
-    margin-right: 509px;
-    margin-top: 725px;
-    margin-bottom: 100px;
+    margin-top: 645px;
+    margin-left: 467px;
+    margin-right: 470px;
     background: #F1CDB3;
     border-radius: 100px;
-    position: absolute;
 }
+
 .our-friends__button-label {
-    font-family: Georgia, serif;
-    width: 174px;
-    height: 24px;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
-    text-align: center;
     padding: 15px 45px;
-    margin: 0;
 }
+
 .content-main__help {
     position: relative;
     background-color: #FFFFFF;
     max-width: 1280px;
     height: 611px;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin: 0 auto;
 }
+
 .content-help {
     position: absolute;
     width: 1200px;
     height: 431px;
-    margin: 80px 40px 100px 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 80px;
 }
+
 .content-help__tittle {
     position: absolute;
-    width: 308px;
-    height: 90px;
-    left: 446px;
-    top: 0px;
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -384,19 +434,25 @@ a.active {
     text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
-    margin: 0 0 60px 0;
+    width: 308px;
+    margin-left: 446px;
+    margin-right: 446px;
+    margin-bottom: 60px;
 }
 
 .content-help__icons {
+    position: absolute;
     width: 1026px;
     height: 281px;
     margin: 150px 87px 0 87px;
 }
+
 .help-icons__1row {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .help-icons__2row {
     display: flex;
     justify-content: space-between;
@@ -405,7 +461,10 @@ a.active {
     margin-left: 84px;
     margin-right: 84px;
 }
-figure {  
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 113px;
     margin: 0;
     margin-left: 120px;
@@ -414,90 +473,88 @@ figure {
     text-align: center;
 }
 
-
 figure:first-child {
     margin-left: 0;
 }
+
 figcaption {
-    margin-top: 30px;
+    margin-top: 90px;
     position: absolute;
     text-align: center;
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: px;
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #545454;
 }
+
 .content-main__donation {
     position: relative;
     background-color: #F6F6F6;
     max-width: 1280px;
     height: 462px;
+    margin: 0 auto;
+}
+
+.main-donation {
+    position: absolute;
+    width: 1200px;
+    height: 282px;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 80px;
 }
-.main-donation {
-    width: 915px;
-    height: 282px;
-    padding-left: 183px;
-    padding-top: 80px;
-    padding-right: 182px;
-    padding-bottom: 100px;
-}
+
 .donation__img {
     position: absolute;
-    width: 505px;
+    max-width: 505px;
     height: 261px;
-    padding-left: 0;
-    padding-top: 11px;
-    padding-right: 410px;
-    padding-bottom: 10px;
+    margin-left: 143px;
+    margin-top: 11px;
+    margin-right: 552px;
+    margin-bottom: 10px;
 }
+
 .main-donation__text {
     width: 380px;
     height: 282px;
-    padding-left: 535px;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-}
-.donation-text__title {
-    width: 300px;
-    height: 90px;
-    margin-bottom: 20px;
+    margin-left: 678px;
     margin-top: 0;
-    font-family: Georgia, serif;
+    margin-right: 142;
+    margin-bottom: 0;
+}
+
+.donation-text__title {
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
-}
-.donation-text__subtitle {
-    font-family: Georgia, serif;
-    font-style: normal;
     width: 320px;
-    height: 17px;
     margin-bottom: 20px;
     margin-top: 0;
+}
+
+.donation-text__subtitle {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 110%;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
+    margin-bottom: 20px;
+    margin-top: 0;
 }
+
 .main-donation__bank-card {
     position: relative;
     background: #F1CDB3;
     border-radius: 9px;
-    align-items: center;
     width: 349px;
     height: 43px;
     margin-bottom: 20px;
@@ -512,30 +569,30 @@ figcaption {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .bank-card-number {
     position: absolute;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 115%;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
     width: 274px;
     height: 26px;
     padding-left: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: Georgia, serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 115%;
-    align-items: center;
-    letter-spacing: 0.06em;
-    color: #545454;
 }
+
 .donation-text__description {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    display: flex;
-    align-items: center;
     color: #B2B2B2;
     width: 380px;
     height: 72px;
@@ -547,74 +604,82 @@ footer {
     background-image: url(../../assets/images/footer-gradient-background.png);
     max-width: 1280px;
     height: 350px;
+    margin: 0 auto;
+}
+
+.footer {
+    position: absolute;
+    width: 1200px;
+    height: 310px;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 40px;
 }
+
 .footer-puppy {
     position: absolute;
     display: block;
     max-width: 300px;
-    margin-top: 40px;
-    margin-right: 0;
     margin-left: 900px;
 }
+
 .footer-contacts {
     position: absolute;
     display: flex;
     width: 740px;
     height: 234px;
     margin-left: 0;
-    margin-top: 56px;
-    margin-right: 500px;
+    margin-top: 16px;
     margin-bottom: 60px;
 }
+
 .contacts-list {
- 
-    width: 278px;
+    position: absolute;
+    width: 286px;
     height: 234px;
     left: 0px;
     top: 16px;
-    margin: 0;
+    margin-right: 160px;
 }
-.locations-list {
 
+.locations-list {
+    position: absolute;
     width: 302px;
     height: 234px;
     left: 438px;
     top: 16px;
     margin: 0;
 }
+
 .list__item {
     list-style: none;
     margin-top: 0;
     margin-bottom: 40px;
-    
+    display: flex;
 }
+
 .item-title {
-    width: 280px;
-    height: 90px;
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 32px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-    margin-top: 0;
-    margin-bottom: 40px;
+    width: 286px;
+    height: 90px;
     text-align: left;
 }
 
 .item-link {
-    text-align: right;
-    height: 23px;
-    font-family: Georgia, serif;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #F1CDB3;
     margin-left: 20px;
     margin-top: 0;
+    text-align: center;
 }

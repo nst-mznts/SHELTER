@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
     width: 1200px;
     height: 60px;
-    margin-top: 60px;
+    margin-top: 30px;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -97,6 +97,14 @@ a.active {
     line-height: 15px;
     letter-spacing: 0.1em;
     text-align: center;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 1342px;
+    background-color: #F6F6F6;
 }
 
 footer {

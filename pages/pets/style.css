@@ -98,3 +98,88 @@ a.active {
     letter-spacing: 0.1em;
     text-align: center;
 }
+
+footer {
+    position: relative;
+    background-image: url(../../assets/images/footer-gradient-background.png);
+    max-width: 1280px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.footer {
+    position: absolute;
+    width: 1200px;
+    height: 310px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 40px;
+}
+
+.footer-puppy {
+    position: absolute;
+    display: block;
+    max-width: 300px;
+    margin-left: 900px;
+}
+
+.footer-contacts {
+    position: absolute;
+    display: flex;
+    width: 740px;
+    height: 234px;
+    margin-left: 0;
+    margin-top: 16px;
+    margin-bottom: 60px;
+}
+
+.contacts-list {
+    position: absolute;
+    width: 286px;
+    height: 234px;
+    left: 0px;
+    top: 16px;
+    margin-right: 160px;
+}
+
+.locations-list {
+    position: absolute;
+    width: 302px;
+    height: 234px;
+    left: 438px;
+    top: 16px;
+    margin: 0;
+}
+
+.list__item {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.item-title {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    width: 286px;
+    height: 90px;
+    text-align: left;
+}
+
+.item-link {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    margin-left: 20px;
+    margin-top: 0;
+    text-align: center;
+}

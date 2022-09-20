@@ -107,6 +107,99 @@ a.active {
     background-color: #F6F6F6;
 }
 
+.our-pets {
+    position: absolute;
+    width: 1200px;
+    height: 1162px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 80px;
+}
+
+.our-pets-title {
+    position: absolute;
+    width: 400px;
+    height: 90px;
+    left: calc(50% - 400px/2);
+    top: 0px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.pet-cards {
+    position: absolute;
+    width: 1200px;
+    height: 930px;
+    top: 135px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+.slider-line-img {
+    height: 270px;
+    max-width: 270px;
+}
+
+.slider-line__item {
+    width: 270px;
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA;
+    border-radius: 9px;
+    margin-right: 90px;
+}
+
+.slider__button {
+    display: block;   
+    text-decoration: none;
+    width: 187px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+}
+
+.slider-line__item:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.slider__button:hover {
+    background: #FDDCC4;
+    border: none;
+}
+
+.slider__button-label {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    margin: 15px 45px;
+}
+
+.slider-pet-name {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 30px 0;
+}
+
 footer {
     position: relative;
     background-image: url(../../assets/images/footer-gradient-background.png);

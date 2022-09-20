@@ -361,14 +361,7 @@ a.active {
     margin: 30px 0;
 }
 
-.slider-prev {
-    border: 2px solid #F1CDB3;
-    border-radius: 100px;
-    width: 52px;
-    height: 52px;
-}
-
-.slider-next {
+.slider-prev, .slider-next {
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     width: 52px;

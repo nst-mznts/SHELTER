@@ -139,6 +139,7 @@ a.active {
     top: 135px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px 40px;
 }
 
 .slider-line-img {
@@ -154,7 +155,6 @@ a.active {
     align-items: center;
     background: #FAFAFA;
     border-radius: 9px;
-    margin-right: 90px;
 }
 
 .slider__button {
@@ -198,6 +198,25 @@ a.active {
     letter-spacing: 0.06em;
     color: #545454;
     margin: 30px 0;
+}
+
+.slider-buttons {
+    position: absolute;
+    width: 340px;
+    height: 52px;
+    top: 1110px;
+    left: 430px;
+}
+
+.slider-double-prev, 
+.slider-prev,
+.slider-page-number,
+.slider-next,
+.slider-double-next {
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
 }
 
 footer {

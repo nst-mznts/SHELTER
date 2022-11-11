@@ -173,6 +173,7 @@ a.active {
     transition: 0.5s all;
     display: flex;
     flex-direction: row;
+    align-content: space-between;
 }
 
 .popup.active {
@@ -182,21 +183,23 @@ a.active {
 
 .close-popup {
     position: absolute;
-    top: -45px;
-    right: -45px;
+    top: -65px;
+    left: 621px;
     cursor: pointer;
     width: 52px;
     height: 52px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
-    padding: 15px;
+    font-size: 20px;
+    background: none;
+    font-weight: 600;
 }
 
 .popup .label__text {
     font-size: 14px;
     font-weight: 500;
     color: #000000;
-    margin-bottom: 5px;
+    margin: 14px;
 }
 
 .pet-popup {

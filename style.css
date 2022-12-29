@@ -373,6 +373,8 @@ h3 {
 .active-wrapper {
     width: 880px;
     height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .active-h3 {

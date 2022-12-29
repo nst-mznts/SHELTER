@@ -31,6 +31,7 @@ Create a pop-up window with pet descriptions
 */
 let popupBg = document.querySelector('.popup__bg');
 let popup = document.querySelector('.popup');
+let popupContent = document.querySelector('.popup-content');
 let openPopupButtons = document.querySelectorAll('.open-popup');
 let closePopupButton = document.querySelector('.close-popup');
 
@@ -42,11 +43,15 @@ openPopupButtons.forEach((button) => {
         popup.classList.add('active');
         let id = e.target.id;
         for (let i=0; i < pet.length; i++) {
-            if (pet[i]['name'] === id) {
-                let titleDescription = document.createElement('h3');
-                titleDescription.classList.add('active-h3');
-                titleDescription.innerHTML = id;
-                popup.appendChild(titleDescription);
+            if (pet[i]['name'] == id) {
+                let petName = document.createElement('h3');
+                petName.classList.add('active-h3');
+                petName.innerHTML = id;
+                popupContent.appendChild(petName);
+                let petImg = document.createElement('img');
+                petImg.src = pet[i]['img'];
+                petImg.classList.add('active-img');
+                popupContent.appendChild(petImg);
             }
         }
     })
@@ -56,6 +61,10 @@ openPopupButtons.forEach((button) => {
 closePopupButton.addEventListener('click',() => {
     popupBg.classList.remove('active');
     popup.classList.remove('active');
+    let deleteName = document.querySelector(".active-h3");
+    deleteName.remove();
+    let deleteImg = document.querySelector(".active-img");
+    deleteImg.remove();
 });
 
 

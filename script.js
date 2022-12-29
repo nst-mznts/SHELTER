@@ -52,6 +52,11 @@ openPopupButtons.forEach((button) => {
                 petImg.src = pet[i]['img'];
                 petImg.classList.add('active-img');
                 popupContent.appendChild(petImg);
+                let type = document.createElement('h3');
+                type.classList.add('active-h3');
+                type.innerHTML = pet[i]['type'];;
+                popupContent.appendChild(type);
+
             }
         }
     })

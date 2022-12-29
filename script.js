@@ -53,12 +53,12 @@ openPopupButtons.forEach((button) => {
                 petImg.src = pet[i]['img'];
                 petImg.classList.add('active-img');
                 dFrag.appendChild(petImg);
-                let type = document.createElement('h3');
-                type.classList.add('active-h3');
+                let type = document.createElement('h4');
+                type.classList.add('active-h4');
                 type.innerHTML = pet[i]['type']+' - '+pet[i]['breed'];
                 dFrag.appendChild(type);
                 let description = document.createElement('p');
-                description.classList.add('active-h3');
+                description.classList.add('active-p');
                 description.innerHTML = pet[i]['description'];
                 dFrag.appendChild(description);
             }

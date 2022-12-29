@@ -41,21 +41,21 @@ openPopupButtons.forEach((button) => {
         e.preventDefault();
         popupBg.classList.add('active');
         popup.classList.add('active');
-        let id = e.target.id;
+        const id = e.target.id;
         const dFrag = document.createDocumentFragment();
         for (let i=0; i < pet.length; i++) {
             if (pet[i]['name'] == id) {
                 let wrapper = document.createElement('div');
                 wrapper.classList.add('active-wrapper');
                 dFrag.appendChild(wrapper);
+                let petImg = document.createElement('img');
+                petImg.src = './assets/images/sophia.png';
+                petImg.classList.add('active-img');
+                wrapper.appendChild(petImg);
                 let petName = document.createElement('h3');
                 petName.classList.add('active-h3');
                 petName.innerHTML = id;
                 wrapper.appendChild(petName);
-                let petImg = document.createElement('img');
-                petImg.src = pet[i]['img'];
-                petImg.classList.add('active-img');
-                wrapper.appendChild(petImg);
                 let type = document.createElement('h4');
                 type.classList.add('active-h4');
                 type.innerHTML = pet[i]['type']+' - '+pet[i]['breed'];
@@ -64,6 +64,22 @@ openPopupButtons.forEach((button) => {
                 description.classList.add('active-p');
                 description.innerHTML = pet[i]['description'];
                 wrapper.appendChild(description);
+                let wrap = document.createElement('div');
+                wrapper.appendChild(wrap);
+                let list = document.createElement('ul');
+                wrap.appendChild(list);
+                let age = document.createElement('li');
+                age.innerHTML = 'Age: '+pet[i]['age'];
+                list.appendChild(age);
+                let inoculations = document.createElement('li');
+                inoculations.innerHTML = 'Inoculations: '+pet[i]['inoculations'];
+                list.appendChild(inoculations);
+                let diseases = document.createElement('li');
+                diseases.innerHTML = 'Diseases: '+pet[i]['diseases'];
+                list.appendChild(diseases);
+                let parasites = document.createElement('li');
+                parasites.innerHTML = 'Parasites: '+pet[i]['parasites'];
+                list.appendChild(parasites);
             }
         }
         popupContent.appendChild(dFrag);

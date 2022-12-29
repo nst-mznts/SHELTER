@@ -55,7 +55,7 @@ openPopupButtons.forEach((button) => {
                 let petImg = document.createElement('img');
                 petImg.src = pet[i]['img'];
                 petImg.classList.add('active-img');
-                dFrag.appendChild(petImg);
+                wrapper.appendChild(petImg);
                 let type = document.createElement('h4');
                 type.classList.add('active-h4');
                 type.innerHTML = pet[i]['type']+' - '+pet[i]['breed'];
@@ -74,7 +74,7 @@ openPopupButtons.forEach((button) => {
 closePopupButton.addEventListener('click',() => {
     popupBg.classList.remove('active');
     popup.classList.remove('active');
-    document.querySelector('.popup-content').remove();
+    document.querySelector('.active-wrapper').remove();
 });
 
 

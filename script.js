@@ -1,9 +1,10 @@
 let pet = [];
 fetch('./pets.json')
     .then(response => {
-        pet = response.json();
+        return response.json();
     })
     .then(data => {
+        pet = data;
         console.log(data);
     });
 

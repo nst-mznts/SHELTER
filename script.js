@@ -43,14 +43,10 @@ openPopupButtons.forEach((button) => {
         let id = e.target.id;
         for (let i=0; i < pet.length; i++) {
             if (pet[i]['name'] === id) {
-                let titleDescription = document.createElement('div');
-                titleDescription.classList.add('active-h3');
-                titleDescription.innerHTML = pet[i];
-                popup.appendChild(titleDescription);
-                /*let titleDescription = document.createElement('h3');
+                let titleDescription = document.createElement('h3');
                 titleDescription.classList.add('active-h3');
                 titleDescription.innerHTML = id;
-                popup.appendChild(titleDescription);*/
+                popup.appendChild(titleDescription);
             }
         }
     })

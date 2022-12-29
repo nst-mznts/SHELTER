@@ -48,10 +48,10 @@ openPopupButtons.forEach((button) => {
                 let wrapper = document.createElement('div');
                 wrapper.classList.add('active-wrapper');
                 dFrag.appendChild(wrapper);
-                let petImg = document.createElement('img');
+                /*let petImg = document.createElement('img');
                 petImg.src = './assets/images/sophia.png';
                 petImg.classList.add('active-img');
-                wrapper.appendChild(petImg);
+                wrapper.appendChild(petImg);*/
                 let petName = document.createElement('h3');
                 petName.classList.add('active-h3');
                 petName.innerHTML = id;

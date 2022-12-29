@@ -42,23 +42,28 @@ openPopupButtons.forEach((button) => {
         popupBg.classList.add('active');
         popup.classList.add('active');
         let id = e.target.id;
+        const dFrag = document.createDocumentFragment();
         for (let i=0; i < pet.length; i++) {
             if (pet[i]['name'] == id) {
                 let petName = document.createElement('h3');
                 petName.classList.add('active-h3');
                 petName.innerHTML = id;
-                popupContent.appendChild(petName);
+                dFrag.appendChild(petName);
                 let petImg = document.createElement('img');
                 petImg.src = pet[i]['img'];
                 petImg.classList.add('active-img');
-                popupContent.appendChild(petImg);
+                dFrag.appendChild(petImg);
                 let type = document.createElement('h3');
                 type.classList.add('active-h3');
-                type.innerHTML = pet[i]['type'];;
-                popupContent.appendChild(type);
-
+                type.innerHTML = pet[i]['type']+' - '+pet[i]['breed'];
+                dFrag.appendChild(type);
+                let description = document.createElement('p');
+                description.classList.add('active-h3');
+                description.innerHTML = pet[i]['description'];
+                dFrag.appendChild(description);
             }
         }
+        popupContent.appendChild(dFrag);
     })
 });
 
@@ -66,10 +71,7 @@ openPopupButtons.forEach((button) => {
 closePopupButton.addEventListener('click',() => {
     popupBg.classList.remove('active');
     popup.classList.remove('active');
-    let deleteName = document.querySelector(".active-h3");
-    deleteName.remove();
-    let deleteImg = document.querySelector(".active-img");
-    deleteImg.remove();
+    popupContent.remove();
 });
 
 

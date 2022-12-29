@@ -1,17 +1,14 @@
-const pet = [];
+let pet = [];
 fetch('./pets.json')
     .then(response => {
-    return response.json();
+        pet = response.json();
     })
     .then(data => {
-    console.log(data);
-    pet = data;
+        console.log(data);
     });
-
-
+setTimeout(()=>console.log(pet[0]));
 
 const burger = document.querySelector(".burger");
-
 burger.addEventListener('click',() => {
     let x = document.getElementById("links");
     if (x.style.display === "block") {

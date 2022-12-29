@@ -374,7 +374,7 @@ h3 {
     width: 880px;
     height: 500px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .active-h3 {

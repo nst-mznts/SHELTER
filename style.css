@@ -677,6 +677,11 @@ footer h3 {
         margin-right: 40px;
     }
 
+    .active-img {
+        width: 350px;
+        height: 350px;
+    }
+
     .help_wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -878,6 +883,10 @@ footer h3 {
 
     .card {
         order: 1;
+    }
+
+    .active-img {
+        display: none;
     }
 
     .carousel-button {

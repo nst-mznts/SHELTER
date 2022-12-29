@@ -1,4 +1,14 @@
-const burger = document.querySelector('.burger');
+fetch('./pets.json')
+    .then(response => {
+    return response.json();
+    })
+    .then(data => {
+    console.log(data);
+    });
+
+
+
+const burger = document.querySelector(".burger");
 
 burger.addEventListener('click',() => {
     let x = document.getElementById("links");

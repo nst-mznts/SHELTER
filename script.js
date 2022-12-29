@@ -20,3 +20,4 @@ burger.addEventListener('click',() => {
         burger.src = "./assets/icons/Burger-vert.svg";
     }
 });
+

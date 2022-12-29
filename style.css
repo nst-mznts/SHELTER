@@ -372,14 +372,6 @@ h3 {
 
 .popup-content {
     display: flex;
-    column-gap: 29px;
-}
-
-.active-wrapper {
-    width: 351px;
-    display: flex;
-    flex-direction: row;
-
 }
 
 .active-h3 {

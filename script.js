@@ -45,25 +45,22 @@ openPopupButtons.forEach((button) => {
         const dFrag = document.createDocumentFragment();
         for (let i=0; i < pet.length; i++) {
             if (pet[i]['name'] == id) {
-                let wrapper = document.createElement('div');
-                wrapper.classList.add('active-wrapper');
-                dFrag.appendChild(wrapper);
                 let petName = document.createElement('h3');
                 petName.classList.add('active-h3');
                 petName.innerHTML = id;
-                wrapper.appendChild(petName);
+                dFrag.appendChild(petName);
                 let petImg = document.createElement('img');
                 petImg.src = pet[i]['img'];
                 petImg.classList.add('active-img');
-                wrapper.appendChild(petImg);
+                dFrag.appendChild(petImg);
                 let type = document.createElement('h4');
                 type.classList.add('active-h4');
                 type.innerHTML = pet[i]['type']+' - '+pet[i]['breed'];
-                wrapper.appendChild(type);
+                dFrag.appendChild(type);
                 let description = document.createElement('p');
                 description.classList.add('active-p');
                 description.innerHTML = pet[i]['description'];
-                wrapper.appendChild(description);
+                dFrag.appendChild(description);
             }
         }
         popupContent.appendChild(dFrag);

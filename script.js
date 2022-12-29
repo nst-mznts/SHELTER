@@ -71,7 +71,7 @@ openPopupButtons.forEach((button) => {
 closePopupButton.addEventListener('click',() => {
     popupBg.classList.remove('active');
     popup.classList.remove('active');
-    popupContent.remove();
+    document.querySelector('.popup-content').remove();
 });
 
 

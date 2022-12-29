@@ -214,6 +214,15 @@ h3 {
     text-align: center;
 }
 
+.mobile-btns {
+    display: none;
+}
+
+.arrow {
+    width: 14px;
+    height: 6px;
+}
+
 .carousel {
     max-width: 1200px;
     display: flex;
@@ -374,6 +383,7 @@ h3 {
     width: 880px;
     height: 500px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -673,6 +683,10 @@ footer h3 {
         overflow: hidden;
     }
 
+    .mobile-btns {
+        display: none;
+    }
+
     .card {
         margin-right: 40px;
     }
@@ -889,7 +903,14 @@ footer h3 {
         display: none;
     }
 
-    .carousel-button {
+    .big {
+        display: none;
+    }
+
+    .mobile-btns {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 80px;
         order: 2;
     }
 

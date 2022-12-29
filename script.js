@@ -6,7 +6,7 @@ fetch('./pets.json')
     .then(data => {
         console.log(data);
     });
-setTimeout(()=>console.log(pet[0]));
+
 
 const burger = document.querySelector(".burger");
 burger.addEventListener('click',() => {

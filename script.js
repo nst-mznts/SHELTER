@@ -162,7 +162,7 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         const num = Math.floor(Math.random() * 8);
         changedItem.appendChild(card);
         console.log(num);
-        /*let images = document.createElement("img");
+        let images = document.createElement("img");
         images.src = pet[num]['img'];
         images.classList.add("card-img");
         card.appendChild(images);
@@ -175,6 +175,6 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         button.innerText = "Learn more";
         button.classList.add("card__button");
         button.classList.add("open-popup");
-        card.appendChild(button);*/
+        card.appendChild(button);
     }
 })

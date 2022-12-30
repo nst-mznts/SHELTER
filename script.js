@@ -109,8 +109,8 @@ closePopupButton.addEventListener('click',() => {
 /*
 Create slider
 */
-const BTN_LEFT = document.getElementById("button-left");
-const BTN_RIGHT = document.getElementById("button-right");
+const BTN_LEFT = document.querySelectorAll(".button-left");
+const BTN_RIGHT = document.querySelectorAll(".button-right");
 const CAROUSEL = document.getElementById("carousel-cards");
 const ITEM_LEFT = document.getElementById("item-left");
 const ITEM_RIGHT = document.getElementById("item-right");
@@ -121,7 +121,7 @@ const createCardTemplate = () => {
     return card;
 }
   
-const moveLeft = () => {
+/*const moveLeft = () => {
     CAROUSEL.classList.add("transition-left");
     BTN_LEFT.removeEventListener("click", moveLeft);
     BTN_RIGHT.removeEventListener("click", moveRight);
@@ -131,10 +131,26 @@ const moveRight = () => {
     CAROUSEL.classList.add("transition-right");
     BTN_LEFT.removeEventListener("click", moveLeft);
     BTN_RIGHT.removeEventListener("click", moveRight);
-};
+};*/
+
+BTN_LEFT.forEach((button) => {
+    button.addEventListener('click', () => {
+        CAROUSEL.classList.add("transition-left");
+        BTN_LEFT.removeEventListener("click", moveLeft);
+        BTN_RIGHT.removeEventListener("click", moveRight);
+    })
+});
+
+BTN_RIGHT.forEach((button) => {
+    button.addEventListener('click', () => {
+        CAROUSEL.classList.add("transition-right");
+        BTN_LEFT.removeEventListener("click", moveLeft);
+        BTN_RIGHT.removeEventListener("click", moveRight);
+    })
+});
   
-BTN_LEFT.addEventListener("click", moveLeft);
-BTN_RIGHT.addEventListener("click", moveRight);
+//BTN_LEFT.addEventListener("click", moveLeft);
+//BTN_RIGHT.addEventListener("click", moveRight);
 
 CAROUSEL.addEventListener("animationend", (animationEvent) => {
     let changedItem;

@@ -141,6 +141,21 @@ BTN_RIGHT.forEach((button) => {
     button.addEventListener('click', moveRight);
 });
 
+let numbers = [];
+const getRandomNumber = (min, max) => {
+	console.log(numbers);
+	if (numbers.length >= 3) {
+		numbers = [];
+	}
+	const number = Math.floor(min + Math.random() * (max - min));
+	if (numbers.includes(number)) {
+		return getRandomNumber(min, max);
+	} else {
+		numbers.push(number);
+		return number;
+	}
+};
+
 CAROUSEL.addEventListener("animationend", (animationEvent) => {
     let changedItem;
     if (animationEvent.animationName === "move-left") {
@@ -156,7 +171,7 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
     changedItem.innerHTML = "";
     for (let i = 0; i < 3; i++) {
         const card = createCardTemplate();
-        const num = Math.floor(Math.random() * 8);
+        let num = getRandomNumber(0, 8);
         changedItem.appendChild(card);
         console.log(num);
         let images = document.createElement("img");
@@ -173,5 +188,12 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         button.classList.add("open-popup");
         button.classList.add("card__button");
         card.appendChild(button);
-    }
+    };
+    BTN_LEFT.forEach((button) => {
+        button.addEventListener('click', moveLeft);
+    });
+    
+    BTN_RIGHT.forEach((button) => {
+        button.addEventListener('click', moveRight);
+    });
 });

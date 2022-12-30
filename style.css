@@ -391,6 +391,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
 }
 
 .content-wrapper {
@@ -994,6 +995,9 @@ footer h3 {
 
     .active-wrapper {
         width: 220px;
+    }
+
+    .content-wrapper {
         padding: 10px;
     }
 

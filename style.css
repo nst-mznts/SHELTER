@@ -358,7 +358,7 @@ h3 {
     background: #FAFAFA;
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     border-radius: 9px;
-    width: 70%;
+    width: 900px;
     transition: 0.5s all;
 }
 
@@ -387,14 +387,14 @@ h3 {
 }
 
 .active-wrapper {
-    width: 880px;
+    width: 900px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
 .active-h3 {
-    width: 500px;
+    width: 351px;
     font-size: 3.5rem;
     margin-bottom: 8px;
     font-style: normal;
@@ -402,15 +402,18 @@ h3 {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #000000;
+    text-align: left;
 }
 
 .active-h4 {
+    width: 351px;
     font-style: normal;
     font-weight: 400;
     font-size: 2rem;
     line-height: 115%;
     letter-spacing: 0.06em;
-    color: #000000; 
+    color: #000000;
+    text-align: left;
 }
 
 .active-img {
@@ -419,17 +422,33 @@ h3 {
 }
 
 .active-p {
-    width: 350px;
+    width: 351px;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 110%;
     letter-spacing: 0.06em;
     color: #000000;
+    text-align: left;
 }
 
 .about-pet::marker {
     color: #F1CDB3;
+}
+
+.pet_list {
+    margin-left: 5px;
+}
+
+.about-pet_list {
+    width: 220px;
+}
+
+.about-pet {
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .help {
@@ -703,7 +722,6 @@ footer h3 {
 
     .popup {
         width: 640px;
-        height: 360px;
     }
 
     .active-wrapper {

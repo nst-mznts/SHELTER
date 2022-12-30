@@ -53,6 +53,7 @@ openPopupButtons.forEach((button) => {
                 image.src = pet[i]['img'];
                 wrapper.appendChild(image);
                 let contentWrap = document.createElement('div');
+                contentWrap.classList.add('content-wrapper');
                 wrapper.appendChild(contentWrap);
                 let petName = document.createElement('h3');
                 petName.classList.add('active-h3');

@@ -183,7 +183,6 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         const card = createCardTemplate();
         let num = getRandomNumber(0, 8);
         changedItem.appendChild(card);
-        console.log(num);
         let images = document.createElement("img");
         images.src = pet[num]['img'];
         images.classList.add("card-img");
@@ -201,7 +200,7 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         button.addEventListener('click', openPopup);
     };
 
-    document.querySelectorAll('.open-popup').forEach((button) => {
+    openPopupButtons.forEach((button) => {
         button.addEventListener('click', openPopup);
     });
 

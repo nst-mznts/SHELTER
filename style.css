@@ -899,6 +899,24 @@ footer h3 {
         order: 1;
     }
 
+    .active-wrapper {
+        width: 220px;
+        display: flex;
+        row-gap: 42px;
+        justify-content: center;
+    }
+
+    .active-h4 {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .active-p {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        text-align: justify;
+    }
+
     .active-img {
         display: none;
     }

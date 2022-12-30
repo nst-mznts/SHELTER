@@ -1025,8 +1025,8 @@ footer h3 {
 
     .close-popup {
         position: absolute;
-        top: -50px;
-        right: -50px;
+        top: -45px;
+        right: -45px;
     }
 
     .active-wrapper {

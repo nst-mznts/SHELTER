@@ -119,7 +119,7 @@ const createCardTemplate = () => {
     const card = document.createElement("div");
     card.classList.add("card");
     return card;
-}
+};
   
 const moveLeft = () => {
     CAROUSEL.classList.add("transition-left");
@@ -134,15 +134,12 @@ const moveRight = () => {
 };
 
 BTN_LEFT.forEach((button) => {
-    button.addEventListener('click', moveLeft)
+    button.addEventListener('click', moveLeft);
 });
 
 BTN_RIGHT.forEach((button) => {
-    button.addEventListener('click', moveRight)
+    button.addEventListener('click', moveRight);
 });
-  
-//BTN_LEFT.addEventListener("click", moveLeft);
-//BTN_RIGHT.addEventListener("click", moveRight);
 
 CAROUSEL.addEventListener("animationend", (animationEvent) => {
     let changedItem;
@@ -173,8 +170,8 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         const button = document.createElement("a");
         button.href = "#";
         button.innerText = "Learn more";
-        button.classList.add("card__button");
         button.classList.add("open-popup");
+        button.classList.add("card__button");
         card.appendChild(button);
     }
-})
+});

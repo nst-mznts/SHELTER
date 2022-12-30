@@ -899,11 +899,16 @@ footer h3 {
         order: 1;
     }
 
+    .popup {
+        width: 240px;
+        height: 341px;
+    }
+
     .active-wrapper {
         width: 220px;
+        padding: 10px;
         display: flex;
         row-gap: 42px;
-        justify-content: center;
     }
 
     .active-h4 {

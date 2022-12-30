@@ -199,6 +199,10 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         card.appendChild(petName);
     };
 
+    openPopupButtons.forEach((button) => {
+        button.addEventListener('click', openPopup);
+    });
+
     BTN_LEFT.forEach((button) => {
         button.addEventListener('click', moveLeft);
     });

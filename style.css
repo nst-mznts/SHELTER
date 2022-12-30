@@ -369,7 +369,7 @@ h3 {
 
 .close-popup {
     position: absolute;
-    top: -45px;
+    top: -55px;
     right: -45px;
     cursor: pointer;
     width: 52px;
@@ -396,6 +396,7 @@ h3 {
 .content-wrapper {
     padding-top: 50px;
     padding-right: 20px;
+    padding-bottom: 10px;
 }
 
 .active-h3 {
@@ -740,6 +741,7 @@ footer h3 {
     .content-wrapper {
         padding-top: 10px;
         padding-right: 10px;
+        padding-bottom: 10px;
     }
 
     .active-h3 {

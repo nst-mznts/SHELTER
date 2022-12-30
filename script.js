@@ -121,7 +121,7 @@ const createCardTemplate = () => {
     return card;
 }
   
-/*const moveLeft = () => {
+const moveLeft = () => {
     CAROUSEL.classList.add("transition-left");
     BTN_LEFT.removeEventListener("click", moveLeft);
     BTN_RIGHT.removeEventListener("click", moveRight);
@@ -131,22 +131,14 @@ const moveRight = () => {
     CAROUSEL.classList.add("transition-right");
     BTN_LEFT.removeEventListener("click", moveLeft);
     BTN_RIGHT.removeEventListener("click", moveRight);
-};*/
+};
 
 BTN_LEFT.forEach((button) => {
-    button.addEventListener('click', () => {
-        CAROUSEL.classList.add("transition-left");
-        BTN_LEFT.removeEventListener("click", moveLeft);
-        BTN_RIGHT.removeEventListener("click", moveRight);
-    })
+    button.addEventListener('click', moveLeft)
 });
 
 BTN_RIGHT.forEach((button) => {
-    button.addEventListener('click', () => {
-        CAROUSEL.classList.add("transition-right");
-        BTN_LEFT.removeEventListener("click", moveLeft);
-        BTN_RIGHT.removeEventListener("click", moveRight);
-    })
+    button.addEventListener('click', moveRight)
 });
   
 //BTN_LEFT.addEventListener("click", moveLeft);

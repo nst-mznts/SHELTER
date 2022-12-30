@@ -123,14 +123,22 @@ const createCardTemplate = () => {
   
 const moveLeft = () => {
     CAROUSEL.classList.add("transition-left");
-    BTN_LEFT.removeEventListener("click", moveLeft);
-    BTN_RIGHT.removeEventListener("click", moveRight);
+    BTN_LEFT.forEach((button) => {
+        button.removeEventListener('click', moveLeft);
+    });
+    BTN_RIGHT.forEach((button) => {
+        button.removeEventListener('click', moveRight);
+    });
 };
   
 const moveRight = () => {
     CAROUSEL.classList.add("transition-right");
-    BTN_LEFT.removeEventListener("click", moveLeft);
-    BTN_RIGHT.removeEventListener("click", moveRight);
+    BTN_LEFT.forEach((button) => {
+        button.removeEventListener('click', moveLeft);
+    });
+    BTN_RIGHT.forEach((button) => {
+        button.removeEventListener('click', moveRight);
+    });
 };
 
 BTN_LEFT.forEach((button) => {
@@ -143,8 +151,7 @@ BTN_RIGHT.forEach((button) => {
 
 let numbers = [];
 const getRandomNumber = (min, max) => {
-	console.log(numbers);
-	if (numbers.length >= 3) {
+    if (numbers.length >= 3) {
 		numbers = [];
 	}
 	const number = Math.floor(min + Math.random() * (max - min));
@@ -153,7 +160,7 @@ const getRandomNumber = (min, max) => {
 	} else {
 		numbers.push(number);
 		return number;
-	}
+	}3666666666666666666666666
 };
 
 CAROUSEL.addEventListener("animationend", (animationEvent) => {

@@ -904,8 +904,8 @@ footer h3 {
     }
 
     .popup {
-        width: 240px;
-        height: 341px;
+        width: 260px;
+        height: 361px;
     }
 
     .active-wrapper {
@@ -923,6 +923,7 @@ footer h3 {
         font-size: 2rem;
         letter-spacing: 0;
         margin: 10px 0 20px;
+        text-align: center;
     }
 
     .active-p {
@@ -940,6 +941,7 @@ footer h3 {
     .about-pet {
         font-size: 1.5rem;
         letter-spacing: 0;
+        margin-left: 5px;
     }
 
     .active-img {

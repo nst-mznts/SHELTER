@@ -257,6 +257,7 @@ h3 {
 }
 
 .carousel-cards {
+    width: 990px;
     position: relative;
     left: -1080px;
 }

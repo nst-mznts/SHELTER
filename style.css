@@ -744,11 +744,11 @@ footer h3 {
         padding: 80px 30px 100px;
     }
 
-    /*.carousel-wrapper {
-        width: 580px;
+    .carousel-wrapper {
+        width: 624px;
         margin: 0 20px;
         overflow: hidden;
-    }*/
+    }
 
     .carousel-cards {
         left: -720px;
@@ -1013,11 +1013,11 @@ footer h3 {
         justify-content: center;
     }
 
-   /* .carousel-wrapper {
+   .carousel-wrapper {
         width: 270px;
         margin: 0 20px;
         overflow: hidden;
-    }*/
+    }
 
     .card {
         order: 1;

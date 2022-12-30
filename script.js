@@ -200,6 +200,11 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         card.appendChild(button);
         button.addEventListener('click', openPopup);
     };
+
+    document.querySelectorAll('.open-popup').forEach((button) => {
+        button.addEventListener('click', openPopup);
+    });
+
     BTN_LEFT.forEach((button) => {
         button.addEventListener('click', moveLeft);
     });

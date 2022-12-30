@@ -280,6 +280,7 @@ h3 {
 .card-img {
     height: 270px;
     width: 270px;
+    order: 1;
 }
 
 .pet-name {
@@ -289,6 +290,7 @@ h3 {
     line-height: 2.3rem;
     letter-spacing: 0.06em;
     color: #545454;
+    order: 2;
 }
 
 .card__button {
@@ -306,6 +308,7 @@ h3 {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+    order: 3;
 }
 
 .card:hover .card__button {
@@ -745,7 +748,7 @@ footer h3 {
     }
 
     .carousel-wrapper {
-        width: 620px;
+        width: 615px;
         margin: 0 20px;
         overflow: hidden;
     }

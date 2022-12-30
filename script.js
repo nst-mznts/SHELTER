@@ -168,4 +168,6 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         button.classList.add("open-popup");
         card.appendChild(button);
     }
+    BTN_LEFT.addEventListener("click", moveLeft);
+    BTN_RIGHT.addEventListener("click", moveRight);
 })

@@ -241,9 +241,9 @@ h3 {
     height: 52px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    /*justify-content: center;
+    align-items: center;*/
 }
 
 .carousel-button:hover {
@@ -748,7 +748,7 @@ footer h3 {
     }
 
     .carousel-wrapper {
-        width: 615px;
+        width: 624px;
         margin: 0 20px;
         overflow: hidden;
     }
@@ -917,7 +917,7 @@ footer h3 {
     }
 
     .link a {
-        font-size: 3rem; 
+        font-size: 2.8rem; 
     }
 
     .logo {

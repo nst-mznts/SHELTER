@@ -36,7 +36,6 @@ let openPopupButtons = document.querySelectorAll('.open-popup');
 let closePopupButton = document.querySelector('.close-popup');
 
 // Open pop-up
-
 const openPopup = (e) => {
 	e.preventDefault();
     popupBg.classList.add('active');

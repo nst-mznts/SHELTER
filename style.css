@@ -256,6 +256,11 @@ h3 {
     display: flex;
 }
 
+.carousel-cards {
+    position: relative;
+    left: -1080px;
+}
+
 .card {
     width: 270px;
     flex-direction: column;
@@ -330,6 +335,30 @@ h3 {
 
 .pets_button:hover {
     background: #FDDCC4;
+}
+
+@keyframes move-right {
+    from {left: -1080px;}
+    to {left: -2160px;}
+}
+  
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 1s;
+}
+  
+@keyframes move-left {
+    from {left: -1080px;}
+    to {left: 0px;}
+}
+  
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 1s;
+}
+  
+.hidden {
+    display: none;
 }
 
 .popup__bg {

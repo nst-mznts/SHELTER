@@ -344,7 +344,7 @@ h3 {
   
 .transition-right {
     animation-name: move-right;
-    animation-duration: 1s;
+    animation-duration: 0s;
 }
   
 @keyframes move-left {
@@ -354,7 +354,7 @@ h3 {
   
 .transition-left {
     animation-name: move-left;
-    animation-duration: 1s;
+    animation-duration: 0s;
 }
   
 .hidden {

@@ -150,6 +150,22 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
     
     changedItem.innerHTML = "";
     for (let i = 0; i < 3; i++) {
-      const card = createCardTemplate();
+        const card = createCardTemplate();
+        const num = Math.floor(Math.random() * 8);
+        changedItem.appendChild(card);
+        let images = document.createElement("img");
+        images.src = pet[num]['img'];
+        images.classList.add("card-img");
+        card.appendChild(images);
+        let petName = document.createElement("h4");
+        petName.innerText = pet[num]['name'];
+        petName.classList.add("pet-name");
+        card.appendChild(petName);
+        const button = document.createElement("a");
+        button.href = "#";
+        button.innerText = "Learn more";
+        button.classList.add("card__button");
+        button.classList.add("open-popup");
+        card.appendChild(button);
     }
-  })
+})

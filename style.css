@@ -390,7 +390,6 @@ h3 {
     width: 900px;
     display: grid;
     grid-template-columns: auto auto;
-    align-items: center;
 }
 
 .content-wrapper {
@@ -993,6 +992,12 @@ footer h3 {
 
     .popup {
         width: 240px;
+    }
+
+    .close-popup {
+        position: absolute;
+        top: -45px;
+        right: -45px;
     }
 
     .active-wrapper {

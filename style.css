@@ -751,11 +751,11 @@ footer h3 {
         width: 708px;
     }
 
-    /*.carousel-wrapper {
-        width: 600px;
+    .carousel-wrapper {
+        width: 580px;
         margin: 0 20px;
         overflow: hidden;
-    }*/
+    }
 
     .mobile-btns {
         display: none;

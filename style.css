@@ -918,7 +918,6 @@ footer h3 {
 
     .active-wrapper {
         width: 220px;
-        height: 321px;
         padding: 10px;
     }
 
@@ -942,12 +941,16 @@ footer h3 {
         margin-bottom: 24px;
     }
 
+    .pet_list {
+        margin-left: 10px;
+    }
+
     .about-pet_list {
         width: 220px;
     }
 
     .about-pet {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         letter-spacing: 0;
         margin-left: 10px;
         margin-bottom: 5px;

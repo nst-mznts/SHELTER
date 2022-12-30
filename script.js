@@ -70,6 +70,7 @@ openPopupButtons.forEach((button) => {
                 wrap.classList.add('about-pet_list');
                 contentWrap.appendChild(wrap);
                 let list = document.createElement('ul');
+                list.classList.add('pet_list');
                 wrap.appendChild(list);
                 let age = document.createElement('li');
                 age.classList.add('about-pet');

@@ -750,6 +750,10 @@ footer h3 {
         overflow: hidden;
     }
 
+    .carousel-cards {
+        left: -720px;
+    }
+
     .mobile-btns {
         display: none;
     }

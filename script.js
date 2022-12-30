@@ -154,7 +154,7 @@ BTN_RIGHT.forEach((button) => {
 
 let numbers = [];
 const getRandomNumber = (min, max) => {
-    if (numbers.length >= 3) {
+    if (numbers.length == 6) {
 		numbers = [];
 	}
 	const number = Math.floor(min + Math.random() * (max - min));

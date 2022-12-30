@@ -359,6 +359,7 @@ h3 {
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     border-radius: 9px;
     width: 910px;
+    height: 500px;
     transition: 0.5s all;
 }
 
@@ -731,6 +732,7 @@ footer h3 {
 
     .popup {
         width: 640px;
+        height: 350px;
     }
 
     .active-wrapper {
@@ -1003,6 +1005,7 @@ footer h3 {
 
     .active-h3 {
         width: 220px;
+        text-align: center;
     }
 
     .active-h4 {

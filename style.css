@@ -376,6 +376,9 @@ h3 {
     height: 52px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .close {
@@ -785,6 +788,7 @@ footer h3 {
         position: absolute;
         right: 0;
         top: 0;
+        transition: 0.5s all;
     }
 
     .links {
@@ -813,6 +817,7 @@ footer h3 {
     .burger {
         display: block;
         z-index: 10;
+        transition: 0.5s all;
     }
 
     .start_wrapper {
@@ -908,8 +913,7 @@ footer h3 {
     }
 
     .popup {
-        width: 255px;
-        height: 368px;
+        width: 240px;
     }
 
     .active-wrapper {

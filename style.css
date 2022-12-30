@@ -256,10 +256,10 @@ h3 {
     display: flex;
 }
 
-/*.carousel-cards {
+.carousel-cards {
     position: relative;
     left: -1080px;
-}*/
+}
 
 .card {
     width: 270px;
@@ -747,11 +747,15 @@ footer h3 {
         padding: 80px 30px 100px;
     }
 
-    .carousel-wrapper {
+    .carousel {
+        width: 708px;
+    }
+
+    /*.carousel-wrapper {
         width: 600px;
         margin: 0 20px;
         overflow: hidden;
-    }
+    }*/
 
     .mobile-btns {
         display: none;

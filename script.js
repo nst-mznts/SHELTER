@@ -75,7 +75,8 @@ openPopupButtons.forEach((button) => {
                 wrap.appendChild(list);
                 let age = document.createElement('li');
                 age.classList.add('about-pet');
-                age.innerHTML = 'Age: '+pet[i]['age'];
+                let a = 'Age: ';
+                age.innerHTML = '<b>' + a + '</b>' + pet[i]['age'];
                 list.appendChild(age);
                 let inoculations = document.createElement('li');
                 inoculations.classList.add('about-pet');

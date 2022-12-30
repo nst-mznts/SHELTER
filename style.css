@@ -388,7 +388,6 @@ h3 {
 
 .active-wrapper {
     width: 880px;
-    height: 500px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -702,9 +701,57 @@ footer h3 {
         margin-right: 40px;
     }
 
+    .popup {
+        width: 630px;
+        height: 350px;
+    }
+
+    .active-wrapper {
+        width: 630px;
+        padding: 10px;
+        padding-right: 10px;
+    }
+
+    .active-h3 {
+        width: 260px;
+        text-align: left;
+    }
+
+    .active-h4 {
+        width: 260px;
+        font-size: 2rem;
+        letter-spacing: 0;
+        margin: 10px 0 20px;
+        text-align: left;
+    }
+
+    .active-p {
+        width: 260px;
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    .pet_list {
+        margin-left: 5px;
+    }
+
+    .about-pet_list {
+        width: 260px;
+    }
+
+    .about-pet {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
     .active-img {
         width: 350px;
         height: 350px;
+        margin-right: 10px;
     }
 
     .help_wrapper {
@@ -942,7 +989,7 @@ footer h3 {
     }
 
     .pet_list {
-        margin-left: 10px;
+        margin-left: 5px;
     }
 
     .about-pet_list {

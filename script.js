@@ -109,11 +109,11 @@ closePopupButton.addEventListener('click',() => {
 /*
 Create slider
 */
-const BTN_LEFT = document.querySelector("#button-left");
-const BTN_RIGHT = document.querySelector("#button-right");
-const CAROUSEL = document.querySelector("#carousel-cards");
-const ITEM_LEFT = document.querySelector("#item-left");
-const ITEM_RIGHT = document.querySelector("#item-right");
+const BTN_LEFT = document.getElementById("button-left");
+const BTN_RIGHT = document.getElementById("button-right");
+const CAROUSEL = document.getElementById("carousel-cards");
+const ITEM_LEFT = document.getElementById("item-left");
+const ITEM_RIGHT = document.getElementById("item-right");
 
 const createCardTemplate = () => {
     const card = document.createElement("div");

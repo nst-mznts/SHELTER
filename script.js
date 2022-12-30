@@ -120,13 +120,6 @@ const ITEM_RIGHT = document.getElementById("item-right");
 const createCardTemplate = () => {
     const card = document.createElement("div");
     card.classList.add("card");
-    const button = document.createElement("a");
-    button.href = "#";
-    button.innerText = "Learn more";
-    button.classList.add("open-popup");
-    button.classList.add("card__button");
-    card.appendChild(button);
-    button.addEventListener('click', openPopup);
     return card;
 };
   
@@ -197,11 +190,14 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         petName.innerText = pet[num]['name'];
         petName.classList.add("pet-name");
         card.appendChild(petName);
-    };
-
-    openPopupButtons.forEach((button) => {
+        const button = document.createElement("a");
+        button.href = "#";
+        button.innerText = "Learn more";
+        button.classList.add("open-popup");
+        button.classList.add("card__button");
+        card.appendChild(button);
         button.addEventListener('click', openPopup);
-    });
+    };
 
     BTN_LEFT.forEach((button) => {
         button.addEventListener('click', moveLeft);

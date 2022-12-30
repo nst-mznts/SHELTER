@@ -256,10 +256,10 @@ h3 {
     display: flex;
 }
 
-.carousel-cards {
+/*.carousel-cards {
     position: relative;
     left: -1080px;
-}
+}*/
 
 .card {
     width: 270px;

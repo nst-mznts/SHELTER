@@ -67,6 +67,7 @@ openPopupButtons.forEach((button) => {
                 description.innerHTML = pet[i]['description'];
                 contentWrap.appendChild(description);
                 let wrap = document.createElement('div');
+                wrap.classList.add('about-pet_list');
                 contentWrap.appendChild(wrap);
                 let list = document.createElement('ul');
                 wrap.appendChild(list);

@@ -71,15 +71,19 @@ openPopupButtons.forEach((button) => {
                 let list = document.createElement('ul');
                 wrap.appendChild(list);
                 let age = document.createElement('li');
+                age.classList.add('about-pet');
                 age.innerHTML = 'Age: '+pet[i]['age'];
                 list.appendChild(age);
                 let inoculations = document.createElement('li');
+                inoculations.classList.add('about-pet');
                 inoculations.innerHTML = 'Inoculations: '+pet[i]['inoculations'];
                 list.appendChild(inoculations);
                 let diseases = document.createElement('li');
+                diseases.classList.add('about-pet');
                 diseases.innerHTML = 'Diseases: '+pet[i]['diseases'];
                 list.appendChild(diseases);
                 let parasites = document.createElement('li');
+                parasites.classList.add('about-pet');
                 parasites.innerHTML = 'Parasites: '+pet[i]['parasites'];
                 list.appendChild(parasites);
             }

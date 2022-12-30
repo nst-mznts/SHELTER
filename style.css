@@ -422,6 +422,10 @@ h3 {
     color: #000000;
 }
 
+.about-pet::before {
+    color: #F1CDB3;
+}
+
 .help {
     background: #FFFFFF;
 }
@@ -906,20 +910,22 @@ footer h3 {
 
     .active-wrapper {
         width: 220px;
+        height: 321px;
         padding: 10px;
-        display: flex;
-        row-gap: 42px;
     }
 
     .active-h4 {
         font-size: 2rem;
         letter-spacing: 0;
+        margin: 10px 0 20px;
     }
 
     .active-p {
+        width: 220px;
         font-size: 1.3rem;
         letter-spacing: 0;
         text-align: justify;
+        margin-bottom: 24px;
     }
 
     .active-img {

@@ -206,4 +206,8 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
     BTN_RIGHT.forEach((button) => {
         button.addEventListener('click', moveRight);
     });
+    
+    openPopupButtons.forEach((button) => {
+        button.addEventListener('click', openPopup);
+    });
 });

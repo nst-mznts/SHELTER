@@ -2,7 +2,7 @@
 Read json data from the file with information about pets
 */
 let pet = [];
-fetch('./pets.json')
+fetch('../../pets.json')
     .then(response => {
         return response.json();
     })

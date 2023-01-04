@@ -196,6 +196,7 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
         button.innerText = "Learn more";
         button.classList.add("open-popup");
         button.classList.add("card__button");
+        button.id = pet[num]['name'];
         card.appendChild(button);
         button.addEventListener('click', openPopup);
     };

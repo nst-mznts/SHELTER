@@ -61,7 +61,7 @@ const openPopup = (e) => {
             dFrag.appendChild(wrapper);
             let image = document.createElement("img");
             image.classList.add('active-img');
-            image.src = pet[i]['img'];
+            image.src = "../." + pet[i]['img'];
             wrapper.appendChild(image);
             let contentWrap = document.createElement('div');
             contentWrap.classList.add('content-wrapper');

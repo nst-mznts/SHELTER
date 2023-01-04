@@ -130,9 +130,10 @@ h3 {
     background: #F6F6F6;
 }
 
-.pets_wrapper {
+.our-friends_wrapper {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     row-gap: 60px;
     align-items: center;
     justify-content: center;
@@ -142,6 +143,70 @@ h3 {
 .pets-title {
     width: 480px;
     text-align: center;
+}
+
+.carousel-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 1200px;
+    column-gap: 40px;
+    row-gap: 30px;
+}
+
+.card {
+    width: 270px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    background: #FAFAFA;
+    border-radius: 9px;
+    display: flex;
+}
+
+.card:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    cursor: pointer;
+}
+
+.card-img {
+    height: 270px;
+    width: 270px;
+    order: 1;
+}
+
+.pet-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.06em;
+    color: #545454;
+    order: 2;
+}
+
+.card__button {
+    width: 187px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    order: 3;
+}
+
+.card:hover .card__button {
+    background: #FDDCC4;
+    border: 2px solid #FDDCC4;
+    border-radius: 100px;
 }
 
 footer {
@@ -231,6 +296,20 @@ footer h3 {
 
     .navigation_wrapper {
         padding: 30px;
+    }
+
+    .our-friends_wrapper {
+        width: 708px;
+        padding: 60px 30px 70px;
+    }
+
+    .carousel-cards {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        width: 580px;
+        column-gap: 40px;
+        row-gap: 30px;
     }
 
     footer {
@@ -326,7 +405,7 @@ footer h3 {
         letter-spacing: 0;
     }
 
-    .pets_wrapper {
+    .our-friends_wrapper {
         max-width: 300px;
         padding: 42px 10px;
     }

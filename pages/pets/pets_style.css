@@ -209,6 +209,39 @@ h3 {
     border-radius: 100px;
 }
 
+.pets-pagination {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.pagination-btn {
+    width: 52px;
+    height: 52px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 115%;
+    color: #292929;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn.disabled {
+    color: #CDCDCD;
+    border: 2px solid #CDCDCD;
+    cursor: default;
+}
+
+.pagination-btn.active {
+    border: 2px solid #F1CDB3;
+    background: #F1CDB3;
+    border-radius: 100px;
+}
+
 .popup__bg {
     position: fixed;
     top: 0;

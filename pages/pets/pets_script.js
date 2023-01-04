@@ -119,3 +119,13 @@ closePopupButton.addEventListener('click',() => {
     popup.classList.remove('active');
     document.querySelector('.active-wrapper').remove();
 });
+
+const paginationBtns = document.querySelectorAll('.page-number');
+
+paginationBtns.forEach((button) => {
+    if (button.classList.contains('active') || button.classList.contains('disabled')) {
+        return false;
+    } else {
+        button.style.display = 'none';
+    }
+});

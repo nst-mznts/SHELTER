@@ -263,6 +263,81 @@ h3 {
     height: 12px;
 }
 
+
+.active-wrapper {
+    width: 900px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.content-wrapper {
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.active-h3 {
+    width: 351px;
+    font-size: 3.5rem;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    text-align: left;
+}
+
+.active-h4 {
+    width: 351px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    text-align: left;
+    margin: 10px 0 40px;
+}
+
+.active-img {
+    border-radius: 9px 0px 0px 9px;
+    width: 500px;
+    height: 500px;
+    margin-right: 30px;
+}
+
+.active-p {
+    width: 351px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.about-pet::marker {
+    color: #F1CDB3;
+}
+
+.pet_list {
+    margin-left: 5px;
+}
+
+.about-pet_list {
+    width: 220px;
+}
+
+.about-pet {
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
 footer {
     background: url(../../assets/images/footer-gradient-background.png);
     background-repeat: no-repeat;

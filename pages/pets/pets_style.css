@@ -443,6 +443,62 @@ footer h3 {
         overflow: hidden;
     }
 
+    .popup {
+        width: 640px;
+    }
+
+    .active-wrapper {
+        width: 630px;
+    }
+
+    .content-wrapper {
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    .active-h3 {
+        width: 260px;
+        text-align: left;
+    }
+
+    .active-h4 {
+        width: 260px;
+        font-size: 2rem;
+        letter-spacing: 0;
+        margin: 10px 0 20px;
+        text-align: left;
+    }
+
+    .active-p {
+        width: 260px;
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    .pet_list {
+        margin-left: 5px;
+    }
+
+    .about-pet_list {
+        width: 260px;
+    }
+
+    .about-pet {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    .active-img {
+        width: 350px;
+        height: 350px;
+        margin-right: 10px;
+    }
+
     footer {
         background: url(../../assets/images/footer-gradient-background.png);
         background-repeat: no-repeat;
@@ -552,6 +608,64 @@ footer h3 {
         height: 1365px;
         row-gap: 30px;
         overflow: hidden;
+    }
+
+    .popup {
+        width: 240px;
+    }
+
+    .close-popup {
+        position: absolute;
+        top: -47px;
+        right: -47px;
+    }
+
+    .active-wrapper {
+        width: 220px;
+    }
+
+    .content-wrapper {
+        padding: 10px;
+    }
+
+    .active-h3 {
+        width: 220px;
+        text-align: center;
+    }
+
+    .active-h4 {
+        width: 220px;
+        font-size: 2rem;
+        letter-spacing: 0;
+        margin: 10px 0 20px;
+        text-align: center;
+    }
+
+    .active-p {
+        width: 220px;
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        text-align: justify;
+        margin-bottom: 24px;
+    }
+
+    .pet_list {
+        margin-left: 5px;
+    }
+
+    .about-pet_list {
+        width: 220px;
+    }
+
+    .about-pet {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    .active-img {
+        display: none;
     }
 
     footer {

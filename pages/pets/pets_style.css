@@ -701,6 +701,10 @@ footer h3 {
         display: none;
     }
 
+    .pets-pagination {
+        column-gap: 5px;
+    }
+
     footer {
         background: url(../../assets/images/footer-gradient-background.png);
         background-repeat: no-repeat;

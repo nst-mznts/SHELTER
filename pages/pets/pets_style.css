@@ -303,6 +303,13 @@ footer h3 {
         color: #CDCDCD;
     }
 
+    .link.active {
+        color: #292929;
+        border-bottom: 3px solid #F1CDB3;
+        width: 114px;
+        margin-left: 100px;
+    }
+
     .logo {
         z-index: 10;
     }

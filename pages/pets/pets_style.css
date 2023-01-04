@@ -371,7 +371,6 @@ footer h3 {
         justify-content: center;
         display: grid;
         grid-template-columns: auto;
-        row-gap: 40px;
     }
 
     .link {

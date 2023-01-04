@@ -59,6 +59,17 @@ body {
     letter-spacing: 0.1em;
 }
 
+.logo-mobile {
+    display: none;
+    width: 300px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 158px;
+}
+
 .burger {
     display: none;
 }
@@ -902,7 +913,7 @@ footer h3 {
         z-index: 9;
         background: #292929;
         width: 320px;
-        height: 823px;
+        height: 766px;
         display: none;
         position: absolute;
         right: 0;
@@ -912,12 +923,11 @@ footer h3 {
 
     .links {
         width: 243px;
-        padding: 248px 38px 0;
+        padding: 30px 38px 0;
         align-items: center;
         justify-content: center;
         display: grid;
         grid-template-columns: auto;
-        row-gap: 40px;
     }
 
     .link {
@@ -927,6 +937,13 @@ footer h3 {
 
     .link a {
         font-size: 2.8rem; 
+    }
+
+    .link.active {
+        color: #FAFAFA;
+        border-bottom: 3px solid #F1CDB3;
+        width: 227px;
+        margin-left: 50px;
     }
 
     .logo {

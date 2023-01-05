@@ -347,7 +347,7 @@ h3 {
     color: #292929;
 }
 
-.pets_button:hover {
+.pets_button:hover, .credit-card:hover {
     background: #FDDCC4;
 }
 

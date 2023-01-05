@@ -37,6 +37,11 @@ mobileBurger.addEventListener('click',() => {
     burger.style.display = 'block';
 });
 
+const creditCard = document.querySelector('.credit-card');
+creditCard.addEventListener('click',() => {
+    alert('bank card number copied');
+});
+
 /*
 Create a pop-up window with pet descriptions
 */

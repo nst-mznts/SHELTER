@@ -201,16 +201,16 @@ for (let item of items) {
 
 function createCell(text, wr) {
 	let picture = document.createElement('img');
-	picture.src = pet[text].img;
+	picture.src = "../." + pet[text]['img'];
 	wr.appendChild(picture);
     let name = document.createElement('h4');
     name.classList.add('pet-name');
-    name.innerHTML = pet[text].name;
+    name.innerHTML = pet[text]['name'];
     wr.appendChild(name);
     let button = document.createElement('a');
     button.classList.add('card__button');
     button.classList.add('open-popup');
-    button.id = pet[text].name;
+    button.id = pet[text]['name'];
     button.href = '#';
     button.innerHTML = 'Learn more';
     wr.appendChild(button);

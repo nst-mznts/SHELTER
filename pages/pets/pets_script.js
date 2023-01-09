@@ -204,12 +204,22 @@ openPopupButtons.forEach((button) => {
 	button.addEventListener('click', openPopup);
 });
 
-// Close pop-up
+// Close the pop-up window by pressing the close button
 closePopupButton.addEventListener('click',() => {
     document.body.style.overflow = '';
     popupBg.classList.remove('active');
     popup.classList.remove('active');
     document.querySelector('.active-wrapper').remove();
+});
+
+// Close the pop-up window by clicking outside the popup boundaries
+document.addEventListener('click', (e) => {
+    if(e.target === popupBg) {
+        popupBg.classList.remove('active');
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+        document.querySelector('.active-wrapper').remove();
+    }
 });
 
 /*

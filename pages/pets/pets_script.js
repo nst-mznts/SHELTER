@@ -8,7 +8,7 @@ fetch('../../pets.json')
     })
     .then(data => {
         pet = data;
-        console.log(data);
+        console.log(pet);
     });
 
 /*
@@ -37,7 +37,6 @@ mobileBurger.addEventListener('click',() => {
     burger.style.display = 'block';
 });
 
-console.log(pet[1]);
 /*
 /*
 Create a pop-up window with pet descriptions

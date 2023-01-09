@@ -1,7 +1,7 @@
 /*
 Read json data from the file with information about pets
 */
-const pet = [];
+let pet = [];
 fetch('../../pets.json')
     .then(response => {
         return response.json();
@@ -46,7 +46,7 @@ let popupContent = document.querySelector('.popup-content');
 let openPopupButtons = document.querySelectorAll('.open-popup');
 let closePopupButton = document.querySelector('.close-popup');
 
-
+/*
 // Open pop-up
 const openPopup = (e) => {
 	e.preventDefault();
@@ -119,7 +119,7 @@ closePopupButton.addEventListener('click',() => {
     popup.classList.remove('active');
     document.querySelector('.active-wrapper').remove();
 });
-
+*/
 /*
 Pagination
 */
@@ -127,36 +127,31 @@ let arr = [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 
 
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
-}
+};
 
 let notesOnPage;
-let windowInnerWidth;
-
-windowInnerWidth = window.innerWidth;
+let windowInnerWidth = window.innerWidth;
 if (windowInnerWidth >= 1280) {
   notesOnPage = 8;
 } else if (1280 > windowInnerWidth && windowInnerWidth >= 768) {
   notesOnPage = 6;
 } else if (768 > windowInnerWidth && windowInnerWidth >= 320) {
   notesOnPage = 3;
-}
-
-//function windowSize() {
-//};
-//window.addEventListener('resize', windowSize);
+};
+console.log(pet[1]);
 
 let card = document.querySelector('#carousel-cards');
 let pagination = document.querySelector('#pagination');
 let countOfItems = Math.ceil(arr.length / notesOnPage);
 
 let showPage = (function() {
-	let active = document.querySelector('.active');;
+	let active = document.querySelector('.active');
 	
 	return function(item) {
 		if (active) {
 			active.classList.remove('active');
             active.style.display = 'none';
-		}
+		};
 		active = item;
 		item.classList.add('active');
         item.style.display = 'flex';
@@ -175,7 +170,7 @@ let showPage = (function() {
             wr.classList.add('card');
 			card.appendChild(wr);
 			createCell(note, wr);
-		}
+		};
 	};
 }());
 
@@ -188,7 +183,7 @@ for (let i = 1; i <= countOfItems; i++) {
     number.style.order = 2;
 	pagination.appendChild(number);
 	items.push(number);
-}
+};
 
 showPage(items[0]);
 
@@ -196,7 +191,7 @@ for (let item of items) {
 	item.addEventListener('click', function() {
 		showPage(this);
 	});
-}
+};
 
 function createCell(text, wr) {
 	let image = document.createElement("img");
@@ -215,7 +210,7 @@ function createCell(text, wr) {
     button.href = '#';
     button.innerHTML = 'Learn more';
     wr.appendChild(button);
-}
+};
 
 const startBtn = document.querySelector('.start');
 const endBtn = document.querySelector('.end');

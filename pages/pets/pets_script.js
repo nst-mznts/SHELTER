@@ -98,7 +98,7 @@ let pet = [
       "diseases": ["deafness", "blindness"],
       "parasites": ["lice", "fleas"]
     }
-  ];
+];
 
 
 /*
@@ -140,6 +140,7 @@ let closePopupButton = document.querySelector('.close-popup');
 // Open pop-up
 const openPopup = (e) => {
 	e.preventDefault();
+    document.body.style.overflow = 'hidden';
     popupBg.classList.add('active');
     popup.classList.add('active');
     const id = e.target.id;
@@ -205,6 +206,7 @@ openPopupButtons.forEach((button) => {
 
 // Close pop-up
 closePopupButton.addEventListener('click',() => {
+    document.body.style.overflow = '';
     popupBg.classList.remove('active');
     popup.classList.remove('active');
     document.querySelector('.active-wrapper').remove();
@@ -265,7 +267,7 @@ let showPage = (function() {
 
 let items = [];
 for (let i = 1; i <= countOfItems; i++) {
-	let number = document.createElement('div');
+	let number = document.createElement('button');
     number.classList.add('pages');
     number.style.display = 'none';
 	number.innerHTML = i;
@@ -309,26 +311,42 @@ const nextBtn = document.querySelector('.next');
 
 startBtn.addEventListener('click',() => {
     showPage(items[0]);
+    startBtn.disabled = 'true';
+    prevBtn.disabled = 'true';
     startBtn.classList.add('disabled');
     prevBtn.classList.add('disabled');
+    endBtn.removeAttribute("disabled");
+    nextBtn.removeAttribute("disabled");
     endBtn.classList.remove('disabled');
     nextBtn.classList.remove('disabled');
 });
 
 endBtn.addEventListener('click',() => {
     showPage(items[items.length - 1]);
+    endBtn.disabled = 'true';
+    nextBtn.disabled = 'true';
     endBtn.classList.add('disabled');
     nextBtn.classList.add('disabled');
+    startBtn.removeAttribute("disabled");
+    prevBtn.removeAttribute("disabled");
     startBtn.classList.remove('disabled');
     prevBtn.classList.remove('disabled');
 });
 
 
 nextBtn.addEventListener('click',() => {
+    endBtn.removeAttribute("disabled");
+    nextBtn.removeAttribute("disabled");
+    startBtn.removeAttribute("disabled");
+    prevBtn.removeAttribute("disabled");
     startBtn.classList.remove('disabled');
     prevBtn.classList.remove('disabled');
     let currentPage = +document.querySelector('.active').innerHTML;
+    console.log(currentPage);
+    console.log(items.length-1);
     if (currentPage == items.length-1) {
+        endBtn.disabled = 'true';
+        nextBtn.disabled = 'true';
         nextBtn.classList.add('disabled');
         endBtn.classList.add('disabled');
         showPage(items[currentPage]);
@@ -340,10 +358,18 @@ nextBtn.addEventListener('click',() => {
 });
 
 prevBtn.addEventListener('click',() => {
+    endBtn.removeAttribute("disabled");
+    nextBtn.removeAttribute("disabled");
+    startBtn.removeAttribute("disabled");
+    prevBtn.removeAttribute("disabled");
     nextBtn.classList.remove('disabled');
     endBtn.classList.remove('disabled');
     let currentPage = +document.querySelector('.active').innerHTML;
+    console.log(currentPage);
+    console.log(currentPage-1);
     if (currentPage-1 == 1) {
+        startBtn.disabled = 'true';
+        prevBtn.disabled = 'true';
         prevBtn.classList.add('disabled');
         startBtn.classList.add('disabled');
         showPage(items[currentPage-2]);

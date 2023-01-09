@@ -2,7 +2,7 @@
 Read json data from the file with information about pets
 */
 let pet = [];
-fetch('./pets.json')
+fetch('../../pets.json')
     .then(response => {
         return response.json();
     })
@@ -193,10 +193,9 @@ for (let item of items) {
 	});
 };
 
-
 function createCell(text, wr) {
 	let image = document.createElement("img");
-	image.src = pet[text]["img"];
+	image.src = "../." + pet[text]["img"];
     image.classList.add('card-img');
     image.alt = "Pet " +  pet[text]['name'];
 	wr.appendChild(image);

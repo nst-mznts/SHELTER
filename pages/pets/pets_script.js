@@ -152,7 +152,7 @@ let pagination = document.querySelector('#pagination');
 let countOfItems = Math.ceil(arr.length / notesOnPage);
 
 let showPage = (function() {
-	let active;
+	let active = document.querySelector('.active');;
 	
 	return function(item) {
 		if (active) {
@@ -161,7 +161,7 @@ let showPage = (function() {
 		}
 		active = item;
 		item.classList.add('active');
-        item.style.display = 'block';
+        item.style.display = 'flex';
 		let pageNum = +item.innerHTML;
 		
 		let start = (pageNum - 1) * notesOnPage;
@@ -202,7 +202,7 @@ for (let item of items) {
 function createCell(text, wr) {
 	let image = document.createElement("img");
 	image.src = "../." + pet[text]['img'];
-    image.classList.add('.card-img');
+    image.classList.add('card-img');
     image.alt = "Pet " +  pet[text]['name'];
 	wr.appendChild(image);
     let name = document.createElement('h4');
@@ -218,47 +218,52 @@ function createCell(text, wr) {
     wr.appendChild(button);
 }
 
-document.querySelector('.start').addEventListener('click',() => {
-  showPage(items[0]);
-  document.querySelector('.start').classList.add('disabled');
-  document.querySelector('.prev').classList.add('disabled');
-  document.querySelector('.end').classList.remove('disabled');
-  document.querySelector('.next').classList.remove('disabled');
+const startBtn = document.querySelector('.start');
+const endBtn = document.querySelector('.end');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+startBtn.addEventListener('click',() => {
+    showPage(items[0]);
+    startBtn.classList.add('disabled');
+    prevBtn.classList.add('disabled');
+    endBtn.classList.remove('disabled');
+    nextBtn.classList.remove('disabled');
 });
 
-document.querySelector('.end').addEventListener('click',() => {
-  showPage(items[items.length - 1]);
-  document.querySelector('.end').classList.add('disabled');
-  document.querySelector('.next').classList.add('disabled');
-  document.querySelector('.start').classList.remove('disabled');
-  document.querySelector('.prev').classList.remove('disabled');
+endBtn.addEventListener('click',() => {
+    showPage(items[items.length - 1]);
+    endBtn.classList.add('disabled');
+    nextBtn.classList.add('disabled');
+    startBtn.classList.remove('disabled');
+    prevBtn.classList.remove('disabled');
 });
 
 
-document.querySelector('.next').addEventListener('click',() => {
-  document.querySelector('.start').classList.remove('disabled');
-  document.querySelector('.prev').classList.remove('disabled');
-  let currentPage = +document.querySelector('.active').innerHTML;
-  if (currentPage == items.length-1) {
-    document.querySelector('.next').classList.add('disabled');
-    document.querySelector('.end').classList.add('disabled');
-    showPage(items[currentPage]);
-  } else if (currentPage > items.length-1) {
-    showPage(items[currentPage-1]);
-  } else {
-    showPage(items[currentPage]);
-  }
+nextBtn.addEventListener('click',() => {
+    startBtn.classList.remove('disabled');
+    prevBtn.classList.remove('disabled');
+    let currentPage = +document.querySelector('.active').innerHTML;
+    if (currentPage == items.length-1) {
+        nextBtn.classList.add('disabled');
+        endBtn.classList.add('disabled');
+        showPage(items[currentPage]);
+    } else if (currentPage > items.length-1) {
+        showPage(items[currentPage-1]);
+    } else {
+        showPage(items[currentPage]);
+    }
 });
 
-document.querySelector('.prev').addEventListener('click',() => {
-  document.querySelector('.next').classList.remove('disabled');
-  document.querySelector('.end').classList.remove('disabled');
-  let currentPage = +document.querySelector('.active').innerHTML;
-  if (currentPage-1 == 1) {
-    document.querySelector('.prev').classList.add('disabled');
-    document.querySelector('.start').classList.add('disabled');
-    showPage(items[currentPage-2]);
-  } else if (currentPage-1 > 1) {
-    showPage(items[currentPage-2]);
-  }
+prevBtn.addEventListener('click',() => {
+    nextBtn.classList.remove('disabled');
+    endBtn.classList.remove('disabled');
+    let currentPage = +document.querySelector('.active').innerHTML;
+    if (currentPage-1 == 1) {
+        prevBtn.classList.add('disabled');
+        startBtn.classList.add('disabled');
+        showPage(items[currentPage-2]);
+    } else if (currentPage-1 > 1) {
+        showPage(items[currentPage-2]);
+    }
 });

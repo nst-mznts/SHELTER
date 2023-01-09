@@ -120,12 +120,143 @@ closePopupButton.addEventListener('click',() => {
     document.querySelector('.active-wrapper').remove();
 });
 
-const paginationBtns = document.querySelectorAll('.page-number');
+/*
+Pagination
+*/
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7];
 
-paginationBtns.forEach((button) => {
-    if (button.classList.contains('active') || button.classList.contains('disabled')) {
-        return false;
-    } else {
-        button.style.display = 'none';
-    }
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+shuffle(arr);
+
+let notesOnPage;
+let windowInnerWidth;
+
+windowInnerWidth = window.innerWidth;
+if (windowInnerWidth >= 1280) {
+  notesOnPage = 8;
+} else if (1280 > windowInnerWidth && windowInnerWidth >= 768) {
+  notesOnPage = 6;
+} else if (768 > windowInnerWidth && windowInnerWidth >= 320) {
+  notesOnPage = 3;
+}
+
+//function windowSize() {
+//};
+//window.addEventListener('resize', windowSize);
+
+let card = document.querySelector('#carousel-cards');
+let pagination = document.querySelector('#pagination');
+let countOfItems = Math.ceil(arr.length / notesOnPage);
+
+let showPage = (function() {
+	let active;
+	
+	return function(item) {
+		if (active) {
+			active.classList.remove('active');
+            active.style.display = 'none';
+		}
+		active = item;
+		item.classList.add('active');
+        item.style.display = 'block';
+		let pageNum = +item.innerHTML;
+		
+		let start = (pageNum - 1) * notesOnPage;
+		let end = start + notesOnPage;
+		
+		let notes = arr.slice(start, end);
+        console.log(notes);
+		
+		card.innerHTML = '';
+		for (let note of notes) {
+			let wr = document.createElement('div');
+            wr.classList.add('card-pet');
+			card.appendChild(wr);
+			createCell(note, wr);
+		}
+	};
+}());
+
+let items = [];
+for (let i = 1; i <= countOfItems; i++) {
+	let number = document.createElement('div');
+    number.classList.add('pages');
+    number.style.display = 'none';
+	number.innerHTML = i;
+    number.style.order = 2;
+	pagination.appendChild(number);
+	items.push(number);
+}
+
+showPage(items[0]);
+
+for (let item of items) {
+	item.addEventListener('click', function() {
+		showPage(this);
+	});
+}
+
+function createCell(text, wr) {
+	let picture = document.createElement('img');
+	picture.src = pet[text].img;
+	wr.appendChild(picture);
+    let name = document.createElement('h4');
+    name.classList.add('pet-name');
+    name.innerHTML = pet[text].name;
+    wr.appendChild(name);
+    let button = document.createElement('a');
+    button.classList.add('card__button');
+    button.classList.add('open-popup');
+    button.id = pet[text].name;
+    button.href = '#';
+    button.innerHTML = 'Learn more';
+    wr.appendChild(button);
+}
+
+document.querySelector('.start').addEventListener('click',() => {
+  showPage(items[0]);
+  document.querySelector('.start').classList.add('disabled');
+  document.querySelector('.prev').classList.add('disabled');
+  document.querySelector('.end').classList.remove('disabled');
+  document.querySelector('.next').classList.remove('disabled');
+});
+
+document.querySelector('.end').addEventListener('click',() => {
+  showPage(items[items.length - 1]);
+  document.querySelector('.end').classList.add('disabled');
+  document.querySelector('.next').classList.add('disabled');
+  document.querySelector('.start').classList.remove('disabled');
+  document.querySelector('.prev').classList.remove('disabled');
+});
+
+
+document.querySelector('.next').addEventListener('click',() => {
+  document.querySelector('.start').classList.remove('disabled');
+  document.querySelector('.prev').classList.remove('disabled');
+  let currentPage = +document.querySelector('.active').innerHTML;
+  if (currentPage == items.length-1) {
+    document.querySelector('.next').classList.add('disabled');
+    document.querySelector('.end').classList.add('disabled');
+    showPage(items[currentPage]);
+  } else if (currentPage > items.length-1) {
+    showPage(items[currentPage-1]);
+  } else {
+    showPage(items[currentPage]);
+  }
+});
+
+document.querySelector('.prev').addEventListener('click',() => {
+  document.querySelector('.next').classList.remove('disabled');
+  document.querySelector('.end').classList.remove('disabled');
+  let currentPage = +document.querySelector('.active').innerHTML;
+  if (currentPage-1 == 1) {
+    document.querySelector('.prev').classList.add('disabled');
+    document.querySelector('.start').classList.add('disabled');
+    showPage(items[currentPage-2]);
+  } else if (currentPage-1 > 1) {
+    showPage(items[currentPage-2]);
+  }
 });

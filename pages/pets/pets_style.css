@@ -209,13 +209,14 @@ h3 {
     border-radius: 100px;
 }
 
-.pets-pagination {
+#pagination {
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 20px;
 }
 
-.pagination-btn {
+.pages {
     width: 52px;
     height: 52px;
     font-style: normal;
@@ -228,18 +229,35 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.pagination-btn.disabled {
+.pages.disabled {
     color: #CDCDCD;
     border: 2px solid #CDCDCD;
     cursor: default;
 }
 
-.pagination-btn.active {
+.pages.active {
     border: 2px solid #F1CDB3;
     background: #F1CDB3;
     border-radius: 100px;
+}
+
+.start {
+    order: 0;
+}
+
+.prev {
+    order: 1;
+}
+
+.next {
+    order: 17;
+}
+
+.end {
+    order: 18;
 }
 
 .popup__bg {
@@ -701,7 +719,7 @@ footer h3 {
         display: none;
     }
 
-    .pets-pagination {
+    #pagination {
         column-gap: 5px;
     }
 

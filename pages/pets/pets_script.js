@@ -173,7 +173,7 @@ let showPage = (function() {
 		card.innerHTML = '';
 		for (let note of notes) {
 			let wr = document.createElement('div');
-            wr.classList.add('card-pet');
+            wr.classList.add('card');
 			card.appendChild(wr);
 			createCell(note, wr);
 		}
@@ -200,9 +200,11 @@ for (let item of items) {
 }
 
 function createCell(text, wr) {
-	let picture = document.createElement('img');
-	picture.src = "../." + pet[text]['img'];
-	wr.appendChild(picture);
+	let image = document.createElement("img");
+	image.src = "../." + pet[text]['img'];
+    image.classList.add('.card-img');
+    image.alt = "Pet " +  pet[text]['name'];
+	wr.appendChild(image);
     let name = document.createElement('h4');
     name.classList.add('pet-name');
     name.innerHTML = pet[text]['name'];

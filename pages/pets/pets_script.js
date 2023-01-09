@@ -37,16 +37,18 @@ mobileBurger.addEventListener('click',() => {
     burger.style.display = 'block';
 });
 
+console.log(pet[1]);
+/*
 /*
 Create a pop-up window with pet descriptions
-*/
+
 let popupBg = document.querySelector('.popup__bg');
 let popup = document.querySelector('.popup');
 let popupContent = document.querySelector('.popup-content');
 let openPopupButtons = document.querySelectorAll('.open-popup');
 let closePopupButton = document.querySelector('.close-popup');
 
-/*
+
 // Open pop-up
 const openPopup = (e) => {
 	e.preventDefault();
@@ -138,7 +140,6 @@ if (windowInnerWidth >= 1280) {
 } else if (768 > windowInnerWidth && windowInnerWidth >= 320) {
   notesOnPage = 3;
 };
-console.log(pet[1]);
 
 let card = document.querySelector('#carousel-cards');
 let pagination = document.querySelector('#pagination');
@@ -195,7 +196,7 @@ for (let item of items) {
 
 function createCell(text, wr) {
 	let image = document.createElement("img");
-	image.src = "../." + pet[text]['img'];
+	image.src = "../." + pet[text]["img"];
     image.classList.add('card-img');
     image.alt = "Pet " +  pet[text]['name'];
 	wr.appendChild(image);

@@ -1,7 +1,7 @@
 /*
 Read json data from the file with information about pets
 */
-let pet = [];
+const pet = [];
 fetch('../../pets.json')
     .then(response => {
         return response.json();
@@ -129,8 +129,6 @@ function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
 
-shuffle(arr);
-
 let notesOnPage;
 let windowInnerWidth;
 
@@ -168,6 +166,7 @@ let showPage = (function() {
 		let end = start + notesOnPage;
 		
 		let notes = arr.slice(start, end);
+        shuffle(notes);
         console.log(notes);
 		
 		card.innerHTML = '';

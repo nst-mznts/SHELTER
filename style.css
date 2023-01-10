@@ -238,13 +238,14 @@ h3 {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    column-gap: 50px;
 }
 
 .carousel-wrapper {
     width: 990px;
-    margin: 0 20px;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    column-gap: 90px;
 }
 
 .carousel-button {
@@ -263,23 +264,14 @@ h3 {
     border: 2px solid #FDDCC4;
 }
 
-.item, .carousel-cards, .card {
-    display: flex;
-}
-
-.carousel-cards {
-    position: relative;
-    left: -1080px;
-}
-
 .card {
+    display: flex;
     width: 270px;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
     background: #FAFAFA;
     border-radius: 9px;
-    margin-right: 90px;
 }
 
 .card:hover {
@@ -349,30 +341,6 @@ h3 {
 
 .pets_button:hover, .credit-card:hover {
     background: #FDDCC4;
-}
-
-@keyframes move-right {
-    from {left: -1080px;}
-    to {left: -2160px;}
-}
-  
-.transition-right {
-    animation-name: move-right;
-    animation-duration: 0s;
-}
-  
-@keyframes move-left {
-    from {left: -1080px;}
-    to {left: 0px;}
-}
-  
-.transition-left {
-    animation-name: move-left;
-    animation-duration: 0s;
-}
-  
-.hidden {
-    display: none;
 }
 
 .popup__bg {
@@ -759,18 +727,13 @@ footer h3 {
     }
 
     .carousel {
-        width: 708px;
+        max-width: 708px;
+        column-gap: 12px;
     }
-
+    
     .carousel-wrapper {
         width: 580px;
-        margin: 0 20px;
-        overflow: hidden;
-    }
-
-    .carousel-cards {
-        position: relative;
-        left: -950px;
+        column-gap: 40px;
     }
 
     .mobile-btns {
@@ -1031,17 +994,11 @@ footer h3 {
 
     .carousel {
         max-width: 300px;
-        display: flex;
-        align-items: center;
         flex-direction: column;
-        row-gap: 20px;
-        justify-content: center;
     }
-
-   .carousel-wrapper {
+    
+    .carousel-wrapper {
         width: 270px;
-        margin: 0 20px;
-        overflow: hidden;
     }
 
     .card {

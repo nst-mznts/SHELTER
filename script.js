@@ -236,53 +236,64 @@ closePopupButton.addEventListener('mouseout',() => {
     closePopupButton.style.background = '';
 });
   
-
 /*
 Create slider
 */
-const BTN_LEFT = document.querySelectorAll(".button-left");
-const BTN_RIGHT = document.querySelectorAll(".button-right");
-const CAROUSEL = document.getElementById("carousel-cards");
-const ITEM_LEFT = document.getElementById("item-left");
-const ITEM_RIGHT = document.getElementById("item-right");
+let arr = [0, 1, 2];
 
-const createCardTemplate = () => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    return card;
-};
-  
-const moveLeft = () => {
-    CAROUSEL.classList.add("transition-left");
-    BTN_LEFT.forEach((button) => {
-        button.removeEventListener('click', moveLeft);
-    });
-    BTN_RIGHT.forEach((button) => {
-        button.removeEventListener('click', moveRight);
-    });
-};
-  
-const moveRight = () => {
-    CAROUSEL.classList.add("transition-right");
-    BTN_LEFT.forEach((button) => {
-        button.removeEventListener('click', moveLeft);
-    });
-    BTN_RIGHT.forEach((button) => {
-        button.removeEventListener('click', moveRight);
-    });
-};
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}
 
-BTN_LEFT.forEach((button) => {
-    button.addEventListener('click', moveLeft);
+let notesOnPage;
+let windowInnerWidth;
+
+windowInnerWidth = window.innerWidth;
+if (windowInnerWidth >= 1280) {
+    notesOnPage = 3;
+} else if (1280 > windowInnerWidth && windowInnerWidth >= 768) {
+    notesOnPage = 2;
+} else if (768 > windowInnerWidth && windowInnerWidth >= 320) {
+    notesOnPage = 1;
+}
+
+const carousel = document.querySelector('#carousel-wrapper');
+
+let showPage = (function() {
+    carousel.innerHTML = '';
+    for (let note of arr) {
+        let wr = document.createElement('div');
+        wr.classList.add('card');
+        carousel.appendChild(wr);
+        createCell(note, wr);
+    }
 });
 
-BTN_RIGHT.forEach((button) => {
-    button.addEventListener('click', moveRight);
-});
+showPage(arr);
+
+function createCell(text, wr) {
+    let picture = document.createElement('img');
+	picture.src = pet[text].img;
+    picture.classList.add('card-img');
+	wr.appendChild(picture);
+    let name = document.createElement('h4');
+    name.classList.add('pet-name');
+    name.innerHTML = pet[text].name;
+    wr.appendChild(name);
+    let button = document.createElement('a');
+    button.classList.add('card__button');
+    button.classList.add('open-popup');
+    button.id = pet[text].name;
+    button.href = '#';
+    button.innerHTML = 'Learn more';
+    button.addEventListener('click', openPopup);
+    wr.appendChild(button);
+}
 
 let numbers = [];
 const getRandomNumber = (min, max) => {
-    if (numbers.length == 6) {
+	console.log(numbers);
+    if (numbers.length == 6 ) {
 		numbers = [];
 	}
 	const number = Math.floor(min + Math.random() * (max - min));
@@ -294,46 +305,19 @@ const getRandomNumber = (min, max) => {
 	}
 };
 
-CAROUSEL.addEventListener("animationend", (animationEvent) => {
-    let changedItem;
-    if (animationEvent.animationName === "move-left") {
-      CAROUSEL.classList.remove("transition-left");
-      changedItem = ITEM_LEFT;
-      document.querySelector("#item-active").innerHTML = ITEM_LEFT.innerHTML;
-    } else {
-      CAROUSEL.classList.remove("transition-right");
-      changedItem = ITEM_RIGHT;
-      document.querySelector("#item-active").innerHTML = ITEM_RIGHT.innerHTML;
-    }
-    
-    changedItem.innerHTML = "";
-    for (let i = 0; i < 3; i++) {
-        const card = createCardTemplate();
+const moveSlider = () => {
+    arr = [];
+    for (let i = 0; i < notesOnPage; i++) {
         let num = getRandomNumber(0, 8);
-        changedItem.appendChild(card);
-        let images = document.createElement("img");
-        images.src = pet[num]['img'];
-        images.classList.add("card-img");
-        card.appendChild(images);
-        let petName = document.createElement("h4");
-        petName.innerText = pet[num]['name'];
-        petName.classList.add("pet-name");
-        card.appendChild(petName);
-        const button = document.createElement("a");
-        button.href = "#";
-        button.innerText = "Learn more";
-        button.classList.add("open-popup");
-        button.classList.add("card__button");
-        button.id = pet[num]['name'];
-        button.addEventListener('click', openPopup);
-        card.appendChild(button);        
-    };
+        arr.push(num);
+    }
+    showPage(arr);
+};
 
-    BTN_LEFT.forEach((button) => {
-        button.addEventListener('click', moveLeft);
-    });
-    
-    BTN_RIGHT.forEach((button) => {
-        button.addEventListener('click', moveRight);
-    });
+document.querySelectorAll('#button-right').forEach((btn) => {
+	btn.addEventListener('click', moveSlider);
+});
+
+document.querySelectorAll('#button-left').forEach((btn) => {
+	btn.addEventListener('click', moveSlider);
 });

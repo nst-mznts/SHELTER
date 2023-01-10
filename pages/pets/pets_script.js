@@ -246,11 +246,34 @@ closePopupButton.addEventListener('mouseout',() => {
 /*
 Pagination
 */
-let arr = [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7];
+let arr = [];
+let numbers = [];
 
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
+const getRandomNumber = (min, max) => {
+    if (numbers.length == 8 ) {
+        numbers = [];
+    }
+    const number = Math.floor(min + Math.random() * (max - min));
+    if (numbers.includes(number)) {
+        return getRandomNumber(min, max);
+    } else {
+        numbers.push(number);
+        return number;
+    }
 };
+
+const makeArrey = () => {
+	do {
+    for (let i=0; i < 8; i++){
+    	arr.push(getRandomNumber(0, 8));
+    }
+  }
+  while (arr.length < 41);
+};
+
+makeArrey();
+console.log(arr);
+console.log(arr.length);
 
 let notesOnPage;
 let windowInnerWidth = window.innerWidth;
@@ -283,8 +306,7 @@ let showPage = (function() {
 		let end = start + notesOnPage;
 		
 		let notes = arr.slice(start, end);
-        shuffle(notes);
-		
+		console.log(notes);
 		card.innerHTML = '';
 		for (let note of notes) {
 			let wr = document.createElement('div');
@@ -366,8 +388,6 @@ nextBtn.addEventListener('click',() => {
     startBtn.classList.remove('disabled');
     prevBtn.classList.remove('disabled');
     let currentPage = +document.querySelector('.active').innerHTML;
-    console.log(currentPage);
-    console.log(items.length-1);
     if (currentPage == items.length-1) {
         endBtn.disabled = 'true';
         nextBtn.disabled = 'true';
@@ -389,8 +409,6 @@ prevBtn.addEventListener('click',() => {
     nextBtn.classList.remove('disabled');
     endBtn.classList.remove('disabled');
     let currentPage = +document.querySelector('.active').innerHTML;
-    console.log(currentPage);
-    console.log(currentPage-1);
     if (currentPage-1 == 1) {
         startBtn.disabled = 'true';
         prevBtn.disabled = 'true';

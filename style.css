@@ -246,6 +246,7 @@ h3 {
     display: flex;
     align-items: center;
     column-gap: 90px;
+    overflow: hidden;
 }
 
 .carousel-button {
@@ -733,7 +734,7 @@ footer h3 {
     
     .carousel-wrapper {
         width: 580px;
-        column-gap: 40px;
+        column-gap: 30px;
     }
 
     .mobile-btns {
@@ -995,6 +996,7 @@ footer h3 {
     .carousel {
         max-width: 300px;
         flex-direction: column;
+        row-gap: 20px;
     }
     
     .carousel-wrapper {

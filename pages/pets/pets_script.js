@@ -100,7 +100,6 @@ let pet = [
     }
 ];
 
-
 /*
 Create a burger menu
 */
@@ -108,23 +107,26 @@ const logo = document.querySelector('.logo');
 const logoMobile = document.querySelector('.logo-mobile');
 const burger = document.querySelector(".burger");
 const mobileBurger = document.querySelector(".mobile_burger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileBg = document.querySelector(".bg-for-mobile");
 
 // Open menu
 burger.addEventListener('click',() => {
-    let x = document.getElementById("links");
-    x.style.display = "block";
+    mobileMenu.style.width = "320px";
+    mobileBg.classList.add('active');
+    document.body.style.overflow = 'hidden';
     logoMobile.style.display = 'flex';
-    logo.style.display = 'none';
-    burger.style.display = 'none';
+    logo.classList.add('inactive');
+    burger.classList.add('transform');
 });
 
 // Close menu
 mobileBurger.addEventListener('click',() => {
-    let x = document.getElementById("links");
-    x.style.display = "none";
-    logoMobile.style.display = 'none';
-    logo.style.display = 'block';
-    burger.style.display = 'block';
+    mobileMenu.style.width = "";
+    mobileBg.classList.remove('active');
+    document.body.style.overflow = '';
+    logo.classList.remove('inactive');
+    burger.classList.remove('transform');
 });
 
 /*
@@ -212,13 +214,19 @@ closePopupButton.addEventListener('click',() => {
     document.querySelector('.active-wrapper').remove();
 });
 
-// Close the pop-up window by clicking outside the popup boundaries
+// Close the pop-up window and mobile menu by clicking outside the popup or menu boundaries
 document.addEventListener('click', (e) => {
     if(e.target === popupBg) {
         popupBg.classList.remove('active');
         popup.classList.remove('active');
         document.body.style.overflow = '';
         document.querySelector('.active-wrapper').remove();
+    } else if(e.target === mobileBg) {
+        mobileMenu.style.width = "";
+        mobileBg.classList.remove('active');
+        document.body.style.overflow = '';
+        logo.classList.remove('inactive');
+        burger.classList.remove('transform');
     }
 });
 

@@ -111,55 +111,13 @@ burger.addEventListener('click',() => {
 
 // Close menu
 mobileBurger.addEventListener('click',() => {
-    //mobileBurger.classList.add('transform');
     mobileMenu.style.width = "";
     mobileBg.classList.remove('active');
     document.body.style.overflow = '';
-    //logoMobile.style.display = 'none';
     logo.classList.remove('inactive');
-    //burger.classList.remove('inactive');
     burger.classList.remove('transform');
 });
 
-/*
-// Close menu
-mobileBurger.addEventListener('click',() => {
-    mobileBurger.classList.remove('transform');
-    mobileMenu.style.width = "";
-    mobileBg.classList.remove('active');
-    document.body.style.overflow = '';
-    logoMobile.style.display = 'none';
-    logo.classList.remove('inactive');
-    burger.classList.remove('inactive');
-    burger.classList.remove('transform');
-});
-
-
-
-// Open menu
-burger.addEventListener('click',() => {
-    let x = document.getElementById("links");
-    x.style.display = "block";
-    logoMobile.style.display = 'flex';
-    logo.style.display = 'none';
-    burger.style.display = 'none';
-    //burger.classList.add('transform');
-});
-
-// Close menu
-mobileBurger.addEventListener('click',() => {
-    let x = document.getElementById("links");
-    x.style.display = "none";
-    logoMobile.style.display = 'none';
-    logo.style.display = 'block';
-    burger.style.display = 'block';
-});
-
-const creditCard = document.querySelector('.credit-card');
-creditCard.addEventListener('click',() => {
-    alert('bank card number copied');
-});
-*/
 /*
 Create a pop-up window with pet descriptions
 */
@@ -256,9 +214,8 @@ document.addEventListener('click', (e) => {
         mobileMenu.style.width = "";
         mobileBg.classList.remove('active');
         document.body.style.overflow = '';
-        logoMobile.style.display = 'none';
         logo.classList.remove('inactive');
-        burger.classList.remove('inactive');
+        burger.classList.remove('transform');
     }
 });
 

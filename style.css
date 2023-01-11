@@ -94,7 +94,7 @@ body {
 
 .burger {
     display: none;
-    transition: 1s;
+    transition: 0.9s;
     opacity: 1;
 }
 

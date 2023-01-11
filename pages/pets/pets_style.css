@@ -659,6 +659,10 @@ footer h3 {
         color: #CDCDCD;
     }
 
+    .link a:hover {
+        color: #FAFAFA;
+    }
+
     .activelink {
         color: #292929;
         border-bottom: 3px solid #F1CDB3;

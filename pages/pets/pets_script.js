@@ -129,6 +129,20 @@ mobileBurger.addEventListener('click',() => {
     burger.classList.remove('transform');
 });
 
+// Close menu by clicking on the link
+const link = document.querySelectorAll('.link');
+const closeMenu = () => {
+    mobileMenu.style.width = "";
+    mobileBg.classList.remove('active');
+    document.body.style.overflow = '';
+    logo.classList.remove('inactive');
+    burger.classList.remove('transform');
+};
+
+link.forEach((li) => {
+	li.addEventListener('click', closeMenu);
+});
+
 /*
 Create a pop-up window with pet descriptions
 */

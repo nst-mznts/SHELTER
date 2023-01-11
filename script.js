@@ -118,6 +118,20 @@ mobileBurger.addEventListener('click',() => {
     burger.classList.remove('transform');
 });
 
+// Close menu by clicking on the link
+const link = document.querySelectorAll('.link');
+const closeMenu = () => {
+    mobileMenu.style.width = "";
+    mobileBg.classList.remove('active');
+    document.body.style.overflow = '';
+    logo.classList.remove('inactive');
+    burger.classList.remove('transform');
+};
+
+link.forEach((li) => {
+	li.addEventListener('click', closeMenu);
+});
+
 /*
 Create a pop-up window with pet descriptions
 */
@@ -308,4 +322,12 @@ document.querySelectorAll('#button-right').forEach((btn) => {
 
 document.querySelectorAll('#button-left').forEach((btn) => {
 	btn.addEventListener('click', moveSlider);
+});
+
+/*
+Interactive effect for bank card number
+*/
+const creditCard = document.querySelector('.credit-card');
+creditCard.addEventListener('click',() => {
+    alert('bank card number copied');
 });

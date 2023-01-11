@@ -342,7 +342,7 @@ h3 {
 .close-popup {
     position: absolute;
     top: -55px;
-    right: -55px;
+    right: -45px;
     cursor: pointer;
     width: 52px;
     height: 52px;

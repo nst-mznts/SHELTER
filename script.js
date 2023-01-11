@@ -96,6 +96,45 @@ const logo = document.querySelector('.logo');
 const logoMobile = document.querySelector('.logo-mobile');
 const burger = document.querySelector(".burger");
 const mobileBurger = document.querySelector(".mobile_burger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileBg = document.querySelector(".bg-for-mobile");
+
+// Open menu
+burger.addEventListener('click',() => {
+    mobileMenu.style.width = "320px";
+    mobileBg.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    logoMobile.style.display = 'flex';
+    logo.classList.add('inactive');
+    burger.classList.add('transform');
+});
+
+// Close menu
+mobileBurger.addEventListener('click',() => {
+    //mobileBurger.classList.add('transform');
+    mobileMenu.style.width = "";
+    mobileBg.classList.remove('active');
+    document.body.style.overflow = '';
+    //logoMobile.style.display = 'none';
+    logo.classList.remove('inactive');
+    //burger.classList.remove('inactive');
+    burger.classList.remove('transform');
+});
+
+/*
+// Close menu
+mobileBurger.addEventListener('click',() => {
+    mobileBurger.classList.remove('transform');
+    mobileMenu.style.width = "";
+    mobileBg.classList.remove('active');
+    document.body.style.overflow = '';
+    logoMobile.style.display = 'none';
+    logo.classList.remove('inactive');
+    burger.classList.remove('inactive');
+    burger.classList.remove('transform');
+});
+
+
 
 // Open menu
 burger.addEventListener('click',() => {
@@ -104,6 +143,7 @@ burger.addEventListener('click',() => {
     logoMobile.style.display = 'flex';
     logo.style.display = 'none';
     burger.style.display = 'none';
+    //burger.classList.add('transform');
 });
 
 // Close menu
@@ -119,7 +159,7 @@ const creditCard = document.querySelector('.credit-card');
 creditCard.addEventListener('click',() => {
     alert('bank card number copied');
 });
-
+*/
 /*
 Create a pop-up window with pet descriptions
 */
@@ -205,34 +245,29 @@ closePopupButton.addEventListener('click',() => {
     document.querySelector('.active-wrapper').remove();
 });
 
-// Close the pop-up window by clicking outside the popup boundaries
+// Close the pop-up window and mobile menu by clicking outside the popup or menu boundaries
 document.addEventListener('click', (e) => {
     if(e.target === popupBg) {
         popupBg.classList.remove('active');
         popup.classList.remove('active');
         document.body.style.overflow = '';
         document.querySelector('.active-wrapper').remove();
+    } else if(e.target === mobileBg) {
+        mobileMenu.style.width = "";
+        mobileBg.classList.remove('active');
+        document.body.style.overflow = '';
+        logoMobile.style.display = 'none';
+        logo.classList.remove('inactive');
+        burger.classList.remove('inactive');
     }
 });
 
 // Hover effect for popup background and close button
 popupContent.addEventListener('mouseout',() => {
-    popupBg.style.background = '#292929';
     closePopupButton.style.background = '#F1CDB3';
 });
   
 popupContent.addEventListener('mouseover',() => {
-    popupBg.style.background = 'rgba(41, 41, 41, 0.6)';
-    closePopupButton.style.background = '';
-});
-  
-closePopupButton.addEventListener('mouseover',() => {
-    popupBg.style.background = '#292929';
-    closePopupButton.style.background = '#F1CDB3';
-});
-  
-closePopupButton.addEventListener('mouseout',() => {
-    popupBg.style.background = 'rgba(41, 41, 41, 0.6)';
     closePopupButton.style.background = '';
 });
   
@@ -240,10 +275,6 @@ closePopupButton.addEventListener('mouseout',() => {
 Create slider
 */
 let arr = [0, 1, 2];
-
-function shuffle(array) {
-    array.sort(() => Math.random() - 0.5);
-}
 
 let notesOnPage;
 let windowInnerWidth;
@@ -255,7 +286,7 @@ if (windowInnerWidth >= 1280) {
     notesOnPage = 2;
 } else if (768 > windowInnerWidth && windowInnerWidth >= 320) {
     notesOnPage = 1;
-}
+};
 
 const carousel = document.querySelector('#carousel-wrapper');
 
@@ -288,7 +319,7 @@ function createCell(text, wr) {
     button.innerHTML = 'Learn more';
     button.addEventListener('click', openPopup);
     wr.appendChild(button);
-}
+};
 
 let numbers = [];
 const getRandomNumber = (min, max) => {

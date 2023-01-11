@@ -311,6 +311,10 @@ h3 {
     justify-content: center
 }
 
+.close-popup:hover {
+    background: #F1CDB3;
+}
+
 .close {
     width: 12px;
     height: 12px;
@@ -365,7 +369,7 @@ h3 {
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
-    line-height: 110%;
+    line-height: 120%;
     letter-spacing: 0.06em;
     color: #000000;
     text-align: left;

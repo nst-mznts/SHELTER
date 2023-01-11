@@ -224,22 +224,10 @@ document.addEventListener('click', (e) => {
 
 // Hover effect for popup background and close button
 popupContent.addEventListener('mouseout',() => {
-    popupBg.style.background = '#292929';
     closePopupButton.style.background = '#F1CDB3';
 });
   
 popupContent.addEventListener('mouseover',() => {
-    popupBg.style.background = 'rgba(41, 41, 41, 0.6)';
-    closePopupButton.style.background = '';
-});
-  
-closePopupButton.addEventListener('mouseover',() => {
-    popupBg.style.background = '#292929';
-    closePopupButton.style.background = '#F1CDB3';
-});
-  
-closePopupButton.addEventListener('mouseout',() => {
-    popupBg.style.background = 'rgba(41, 41, 41, 0.6)';
     closePopupButton.style.background = '';
 });
 

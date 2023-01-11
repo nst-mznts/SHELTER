@@ -1,14 +1,3 @@
-/*
-Read json data from the file with information about pets
-fetch('../../pets.json')
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        pet = data;
-        console.log(pet);
-    });
-*/
 let pet = [
     {
       "name": "Jennifer",

@@ -245,7 +245,7 @@ popupContent.addEventListener('mouseover',() => {
 /*
 Create slider
 */
-let arr = [0, 1, 2];
+let arr = [4, 0, 2];
 
 let notesOnPage;
 let windowInnerWidth;
